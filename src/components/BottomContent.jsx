@@ -1,4 +1,4 @@
-import { Button, List, ListItem, ListItemButton, ListItemText, Stack, Typography } from '@mui/material'
+import { Button, Divider, List, ListItem, ListItemButton, ListItemText, Stack, Typography } from '@mui/material'
 import { Box } from '@mui/system'
 import React from 'react'
 import Paper from '@mui/material/Paper';
@@ -18,12 +18,13 @@ const BottomContent = () => {
 
   return (
     <Box sx={{ flexGrow: 1 }} mt={5}>
-      <Grid container spacing={2} >
+      <Grid container spacing={2}  mb={2} >
         <Grid item xs={12} md={4} >
           <Item elevation={3} sx={{bgcolor:'#222831', color:'#fff',  height: "100%" }}>
             <Typography variant='h6'>
                 Top Services
             </Typography>
+            <Divider variant="middle" color="white"/>
             <List>
                 <ListItemButton>
                     <ListItemText primary="1. Weddings" />
@@ -40,11 +41,12 @@ const BottomContent = () => {
             </Button>
           </Item>
         </Grid>
-        <Grid item xs={12} md={4} >
-          <Item elevation={3} sx={{bgcolor:'#222831', color:'#fff', height: "100%" }}>
+        <Grid item xs={12} md={4}>
+          <Item elevation={3} sx={{bgcolor:'#222831', color:'#fff', height: "100%",  }}>
             <Typography variant='h6'>
                 Overview
             </Typography>
+            <Divider variant="middle" color="white"/>
             <List>
                 <ListItemButton>
                     <ListItemText primary="About" align="center" />
@@ -66,7 +68,8 @@ const BottomContent = () => {
             <Typography variant='h6'>
                 Quick search the map
             </Typography>
-            <Box >
+            <Divider variant="middle" color="white" />
+            <Box mt={1}>
               <img src={map}
               alt="Map" 
               height="200vh"/>

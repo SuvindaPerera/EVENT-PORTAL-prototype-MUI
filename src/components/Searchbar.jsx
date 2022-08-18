@@ -23,8 +23,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import { borders } from '@mui/system';
-
-
+import Filters from './Filters'
 
 
 
@@ -89,8 +88,7 @@ import { borders } from '@mui/system';
                             sx={{ p: 2, borderRadius:"50px" }}
                             >
                             Search
-                         </Button>
-                        
+                         </Button>   
                     </Grid>
                     
                 </Grid>
@@ -131,7 +129,7 @@ import { borders } from '@mui/system';
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={2}>
-                            <Button 
+                            {/* <Button 
                                 style={{textTransform: 'none'}} 
                                 startIcon={<TuneIcon />} 
                                 variant="outlined"
@@ -141,7 +139,8 @@ import { borders } from '@mui/system';
                             
                                 >
                                 <Typography>Filters</Typography>
-                            </Button>
+                            </Button> */}
+                            <Filters title='Select Filters'/>
                     </Grid>
                 </Grid>
                 </Box>

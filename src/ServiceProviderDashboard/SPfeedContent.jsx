@@ -5,7 +5,7 @@ import Tab from '@mui/material/Tab';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
-import EventBidCard from './EventBidCard';
+import EventCard from './EventCard';
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -52,7 +52,7 @@ const FeedLeftBar = () => {
   };
   return (
    
-      <Box bgcolor={"lightcyan"}  display={"flex"}  height="100vh" flex={10} p={3} >
+      <Box bgcolor={"lightcyan"}  display={"flex"}  height="100vh"  p={3} >
         
       <Tabs
         orientation="vertical"
@@ -64,21 +64,21 @@ const FeedLeftBar = () => {
         
         sx={{ borderRight: 2, borderColor: 'divider', bgcolor: 'lightcyan', color: '#fff' }}   
       >
-        <Tab label="Contacted" {...a11yProps(0)} />
+        <Tab label="Active Bids" {...a11yProps(0)} />
         <Tab label="Not responded" {...a11yProps(1)} />
-        <Tab label="Finished" {...a11yProps(2)} />
+        <Tab label="Completed jobs" {...a11yProps(2)} />
       </Tabs>
       <TabPanel value={value} index={0}>
-        <EventBidCard  />
+        <EventCard  />
       </TabPanel>
       <TabPanel value={value} index={1}>
-        <EventBidCard />
-        <EventBidCard />
+        <EventCard />
+        <EventCard />
       </TabPanel>
       <TabPanel value={value} index={2}>
-        <EventBidCard />
-        <EventBidCard />
-        <EventBidCard />
+        <EventCard />
+        <EventCard />
+        <EventCard />
       </TabPanel>
     </Box>
     

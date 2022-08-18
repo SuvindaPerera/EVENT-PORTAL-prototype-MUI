@@ -55,7 +55,7 @@ export default function Login() {
 
                <Link to="../UserDashboard" style={{ textDecoration: 'none' }}>
                 <Button type="submit" size= "large" variant="contained"
-                  sx={{ color: '#fff', borderRadius:"50px" }}
+                  sx={{  borderRadius:"50px" }}
                 >
                 Log In
                 </Button>

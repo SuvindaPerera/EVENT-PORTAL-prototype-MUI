@@ -19,7 +19,6 @@ import { Button, Divider, TextField, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
-import { Link } from 'react-router-dom';
 
 
 export default function NestedList() {
@@ -33,13 +32,13 @@ export default function NestedList() {
     <Box>
 
     
-    <Box bgcolor={"#222831"} flex={2} p={2} minHeight='100%'
+    <Box bgcolor={"#222831"} flex={2} p={2} minHeight='100%' maxWidth='200px'
     // sx={{display:{xs:"none",md:"block", minHeight:'100%'}}}
     >
       <Typography color="#fff" variant="H6" 
       
       >
-        My Events
+        My Services
       </Typography>
       <Divider  color="white" />
       <Box
@@ -51,7 +50,7 @@ export default function NestedList() {
         mt={3}
         backgroundColor={"white"}
       >
-        <TextField fullWidth label="Search Your Events Here.." id="searchEvent" />
+        <TextField fullWidth label="Search Your Services Here.." id="searchEvent" />
       </Box>
       <Button sx={{ color: '#fff', borderRadius:"50px" }} variant="contained" mb={3} startIcon={<SearchIcon/>}
               >
@@ -73,21 +72,22 @@ export default function NestedList() {
         <ListItemIcon>
           <CalendarMonthIcon style={{ color: 'white' }}/>
         </ListItemIcon>
-        <ListItemText primary="All Events" />
+        <ListItemText primary="All Services" />
       </ListItemButton>
+      <Divider  color="white" />
       
       <ListItemButton>
         <ListItemIcon>
           <EventAvailableIcon style={{ color: 'white' }}/>
         </ListItemIcon>
-        <ListItemText primary="Completed Events" />
+        <ListItemText primary="Bidded Events" />
       </ListItemButton>
 
       <ListItemButton onClick={handleClick}>
         <ListItemIcon>
           <AccessAlarmIcon style={{ color: 'white' }}/>
         </ListItemIcon>
-        <ListItemText primary="Current Events" />
+        <ListItemText primary="Accepted Events" />
         {open ? <ExpandLess /> : <ExpandMore />}
       </ListItemButton>
       <Collapse in={open} timeout="auto" unmountOnExit>
@@ -97,7 +97,7 @@ export default function NestedList() {
             <ListItemIcon>
               <StarBorder />
             </ListItemIcon>
-            <ListItemText primary="Jano's Birthday" secondary="Jan 2, 2022"  />
+            <ListItemText primary="Birthday Photographer needed" secondary="Jan 2, 2022"  />
           </ListItemButton>
           <ListItemButton sx={{ pl: 4 }}>
             <ListItemIcon>
@@ -107,19 +107,22 @@ export default function NestedList() {
           </ListItemButton>
         </List>
       </Collapse>
-      <Link to="../EventCreate" style={{ textDecoration: 'none' ,color: 'white'}}>
+      <Divider  color="white" />
       <ListItemButton>
         <ListItemIcon>
           <AddIcon style={{ color: 'white' }}/>
         </ListItemIcon>
-        <ListItemText primary="Create an Event" />
+        <ListItemText primary="Add a Service" />
       </ListItemButton>
-      </Link> 
+      <Divider  color="white" />
       <ListItemButton>
-        <ListItemIcon>
+        <Button variant='contained' style={{ color: 'white' , borderRadius: '50px' }}>
+            Search for a open event
+        </Button>
+        {/* <ListItemIcon>
           <DeleteIcon style={{ color: 'white' }}/>
         </ListItemIcon>
-        <ListItemText primary="Delete an Event" />
+        <ListItemText primary="Search for open events" /> */}
       </ListItemButton>
     </List>
     </Box>

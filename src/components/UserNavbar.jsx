@@ -4,6 +4,7 @@ import logo from './logo.png';
 import FooterLogo from './footerLogo.png';
 import NotificationsIcon from '@mui/icons-material/Notifications';
 import LogoWord from './LogoWord.png';
+import { Link } from 'react-router-dom';
 
 
 const StyledToolbar = styled(Toolbar)({
@@ -58,29 +59,36 @@ const Navbar = () => {
   return (
     <AppBar position="sticky" >
       <StyledToolbar>
-    
+        
         <Box padding="20px" sx={{
                 display: {xs:"none",md:"block"},
             }}>
         <img src={logo} alt="Logo" height="50px"/>
         </Box>
+        
+         
         <Box padding="20px" sx={{
                 display: {xs:"block",md:"none"},
             }}>
         <img src={FooterLogo} alt="Logo" height="50px" />
         </Box>
+        
         <Box padding="20px" sx={{
                 display: {xs:"block",md:"none"},
             }}>
             <img src={LogoWord} alt="Logo" height="30px" />
         </Box>
+       
+        
         <Fullscreen>
           <Box display="flex" gap={2}>
+            <Link to="/" style={{ textDecoration: 'none' }}>
               <Button sx={{ color: '#fff' }}>
                 <Typography>Home</Typography>
               </Button>
+              </Link>
               <Button sx={{ color: '#fff' }}>
-                <Typography>My Events</Typography>
+                <Typography>Events</Typography>
               </Button>
               <Button sx={{ color: '#fff' }}>
                 <Typography>Services</Typography>

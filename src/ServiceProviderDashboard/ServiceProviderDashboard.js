@@ -1,8 +1,8 @@
 import { Box, Stack } from '@mui/material'
 import React from 'react'
-import UDleftbar from './UDleftbar'
-import UDfeed from './UDfeed'
-import UDrightbar from './UDrightbar'
+import UDleftbar from './SPleftbar'
+import UDfeed from './SPfeed'
+import UDrightbar from './SPrightbar'
 import UserNavbar from '../components/UserNavbar'
 import Footer from '../components/Footer'
 

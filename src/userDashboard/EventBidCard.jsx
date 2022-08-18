@@ -13,7 +13,7 @@ import MessageIcon from '@mui/icons-material/Message';
 
 export default function BasicCard() {
   return (
-    <Card sx={{ minWidth: 275, mb: 2 }} >
+    <Card sx={{ minWidth: 275, mb: 2 }}  >
       <CardContent display="flex">
         <Box display="flex" justifyContent="right">
         <Chip
@@ -39,16 +39,10 @@ export default function BasicCard() {
       </CardContent>
       <CardActions>
         <Button size="small" variant="contained"
-            sx={{  borderRadius:"50px" }}
-            
+            sx={{  borderRadius:"50px" }}     
         >
             <MessageIcon fontSize="small"/>
             Contact
-        </Button>
-        <Button size="small" variant="contained"
-            sx={{  borderRadius:"50px" }}
-        >
-            View Profile
         </Button>
       </CardActions>
     </Card>

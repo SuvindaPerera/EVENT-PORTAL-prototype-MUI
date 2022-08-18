@@ -12,12 +12,18 @@ import SigninService from "./SigninService";
 import Login from "./Login";
 import UserDashboard from "./userDashboard/UserDashboard";
 import SigninFork from "./SigninFork";
+import LandingPage from "./LandingPage";
+import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProviderDashboard";
+import EventCreate from "./userDashboard/EventCreate";
 
 function App() {
   return (
     <Router>
       <Switch>
         <Route exact path="/">
+          <LandingPage/>
+        </Route>
+        <Route path="/Home">
           <Home/>
         </Route>
         <Route path="/SigninSearching">
@@ -35,8 +41,16 @@ function App() {
         <Route path="/SigninFork">
           <SigninFork/>
         </Route>
-      </Switch>
-      
+        {/* <Route path="/LandingPage">
+          <LandingPage/>
+        </Route> */}
+        <Route path="/ServiceProviderDashboard">
+          <ServiceProviderDashboard/>
+        </Route>
+        <Route path="/EventCreate">
+          <EventCreate/>
+        </Route>
+      </Switch> 
     </Router>
     
   );

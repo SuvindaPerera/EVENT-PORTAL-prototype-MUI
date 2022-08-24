@@ -16,7 +16,7 @@ const UserDashboard = () => {
       >
       <Stack direction="row" spacing={2} justifyContent="space-between"
       >
-        <UDleftbar/>
+        {/* <UDleftbar/> */}
         <UDfeed/>
         <UDrightbar/>
       </Stack>
@@ -26,9 +26,9 @@ const UserDashboard = () => {
          sx={{display:{xs:"block",md:"none"}}}
       >
         <Stack justifyContent="center" spacing={3}>
-          <Box maxWidth="100%">
+          {/* <Box maxWidth="100%">
             <UDleftbar/>
-          </Box>
+          </Box> */}
           
           <UDfeed/>
           <UDrightbar/>

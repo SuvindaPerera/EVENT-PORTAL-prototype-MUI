@@ -7,82 +7,18 @@ import Box from '@mui/material/Box';
 import { Button, Card, CardActions, CardContent } from '@mui/material';
 import EventBidCard from './EventBidCard';
 
-function TabPanel(props) {
-  const { children, value, index, ...other } = props;
 
-  return (
-    <div
-      role="tabpanel"
-      hidden={value !== index}
-      id={`vertical-tabpanel-${index}`}
-      aria-labelledby={`vertical-tab-${index}`}
-      {...other}
-      
-    >
-      {value === index && (
-        <Box sx={{ p: 3 }}>
-          <Typography>{children}</Typography>
-        </Box>
-      )}
-    </div>
-  );
-}
-
-TabPanel.propTypes = {
-  children: PropTypes.node,
-  index: PropTypes.number.isRequired,
-  value: PropTypes.number.isRequired,
-};
-
-function a11yProps(index) {
-  return {
-    id: `vertical-tab-${index}`,
-    'aria-controls': `vertical-tabpanel-${index}`,
-  };
-}
 
 const FeedLeftBar = () => {
-
-  
-
-  const [value, setValue] = React.useState(0);
-
-  const handleChange = (event, newValue) => {
-    setValue(newValue);
-  };
   return (
-   
+    <div>
       <Box bgcolor={"lightcyan"}  display={"flex"}  height="100vh" flex={10} p={3} >
-        
-      <Tabs
-        orientation="vertical"
-        variant="scrollable"
-        value={value}
-        onChange={handleChange}
-        aria-label="UserEvents"
-        maxWidth="100%"
-        
-        sx={{ borderRight: 2, borderColor: 'divider', bgcolor: 'lightcyan', color: '#fff' }}   
-      >
-        <Tab label="Contacted" {...a11yProps(0)} />
-        <Tab label="Not responded" {...a11yProps(1)} />
-        <Tab label="Finished" {...a11yProps(2)} />
-      </Tabs>
-      <TabPanel value={value} index={0}>
-        <EventBidCard  />
-      </TabPanel>
-      <TabPanel value={value} index={1}>
         <EventBidCard />
-        <EventBidCard />
-      </TabPanel>
-      <TabPanel value={value} index={2}>
-        <EventBidCard />
-        <EventBidCard />
-        <EventBidCard />
-      </TabPanel>
-    </Box>
-    
+      </Box>
+    </div>
   )
 }
 
 export default FeedLeftBar
+
+  

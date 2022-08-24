@@ -15,6 +15,7 @@ import SigninFork from "./SigninFork";
 import LandingPage from "./LandingPage";
 import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProviderDashboard";
 import EventCreate from "./userDashboard/EventCreate";
+import EventCreateNew from "./Event/EventCreateNew";
 
 function App() {
   return (
@@ -49,6 +50,9 @@ function App() {
         </Route>
         <Route path="/EventCreate">
           <EventCreate/>
+        </Route>
+        <Route>
+          <EventCreateNew/>
         </Route>
       </Switch> 
     </Router>

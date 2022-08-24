@@ -22,108 +22,12 @@ import DeleteIcon from '@mui/icons-material/Delete';
 import { Link } from 'react-router-dom';
 
 
-export default function NestedList() {
-  const [open, setOpen] = React.useState(true);
-
-  const handleClick = () => {
-    setOpen(!open);
-  };
-
+const UDleftbar = () => {
   return (
-    <Box>
-
-    
-    <Box bgcolor={"#222831"} flex={2} p={2} minHeight='100%'
-    // sx={{display:{xs:"none",md:"block", minHeight:'100%'}}}
-    >
-      <Typography color="#fff" variant="H6" 
-      
-      >
-        My Events
-      </Typography>
-      <Divider  color="white" />
-      <Box
-        sx={{
-          
-          maxWidth: '100%',
-        }}
-        mb={3}
-        mt={3}
-        backgroundColor={"white"}
-      >
-        <TextField fullWidth label="Search Your Events Here.." id="searchEvent" />
-      </Box>
-      <Button sx={{ color: '#fff', borderRadius:"50px" }} variant="contained" mb={3} startIcon={<SearchIcon/>}
-              >
-                Search
-      </Button>
-     <Box  mt={3}>   
-    <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: '#222831', color: '#fff' }}
-     
-      component="nav"
-      aria-labelledby="myevents-list"
-      // subheader={
-      //   <ListSubheader component="div" id="myevents-list" backgroundColor="lightcyan">
-      //     My Events
-      //   </ListSubheader>
-      // }
-    >
-      <ListItemButton>
-        <ListItemIcon>
-          <CalendarMonthIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="All Events" />
-      </ListItemButton>
-      
-      <ListItemButton>
-        <ListItemIcon>
-          <EventAvailableIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Completed Events" />
-      </ListItemButton>
-
-      <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <AccessAlarmIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Current Events" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding 
-        >
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Jano's Birthday" secondary="Jan 2, 2022"  />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Welcome party" secondary="Jan 2, 2022"  />
-          </ListItemButton>
-        </List>
-      </Collapse>
-      <Link to="../EventCreate" style={{ textDecoration: 'none' ,color: 'white'}}>
-      <ListItemButton>
-        <ListItemIcon>
-          <AddIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Create an Event" />
-      </ListItemButton>
-      </Link> 
-      <ListItemButton>
-        <ListItemIcon>
-          <DeleteIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Delete an Event" />
-      </ListItemButton>
-    </List>
-    </Box>
-    </Box>
-    </Box>
-  );
+    <div>
+      <h1>LeftBar</h1>
+    </div>
+  )
 }
+
+export default UDleftbar

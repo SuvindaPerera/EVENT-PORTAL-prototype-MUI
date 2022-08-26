@@ -1,10 +1,11 @@
 import { Box, TextField, Typography } from '@mui/material'
 import UserNavbar from '../components/UserNavbar'
 import Grid from '@mui/material/Unstable_Grid2';
-import { DayPicker } from 'react-day-picker';
+// import { DayPicker } from 'react-day-picker';
 import 'react-datepicker/dist/react-datepicker.css';
 import DatePicker from 'react-datepicker';
 import { useState } from 'react';
+import 'react-datepicker/dist/react-datepicker.css';
 // import { AdapterDateFns } from '@mui/x-date-pickers/AdapterDateFns';
 // import LocalizationProvider from '@mui/x-date-pickers/LocalizationProvider';
 
@@ -14,8 +15,8 @@ import { useState } from 'react';
 
 const EventCreateNew = () => {
 
-// const [selectdStartDate, setSelectedStartDate] = useState(null)
-// const [selectdEndDate, setSelectedEndDate] = useState(null)
+const [selectdStartDate, setSelectedStartDate] = useState(null)
+const [selectdEndDate, setSelectedEndDate] = useState(null)
 
   return (
     <Box>
@@ -52,7 +53,7 @@ const EventCreateNew = () => {
                         <Grid item xs={12} md={12}>
                             <h3>Select Date/Dates</h3>
                         </Grid>
-                        {/* <Grid item xs={12} md={6}>
+                        <Grid item xs={12} md={6}>
                             
                             <h5>Start date</h5>
                             <DatePicker
@@ -76,7 +77,7 @@ const EventCreateNew = () => {
                             showYearDropdown
                             scrollableMonthYearDropdown
                             />
-                        </Grid> */}
+                        </Grid>
                     </Grid>
                 </Grid>
             </Grid>

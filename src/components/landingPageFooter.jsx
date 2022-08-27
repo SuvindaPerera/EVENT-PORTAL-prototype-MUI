@@ -76,7 +76,8 @@ const Footer = () => {
                   
                 }}
                 >
-                  <Button variant='contained'
+                  <Button 
+                    variant='contained'
                     style={{
                       borderRadius: '50px',
                     }}

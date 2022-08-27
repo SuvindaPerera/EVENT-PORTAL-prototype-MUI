@@ -15,7 +15,7 @@ import SigninFork from "./SigninFork";
 import LandingPage from "./LandingPage";
 import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProviderDashboard";
 import EventCreate from "./userDashboard/EventCreate";
-import EventCreateNew from "./Event/EventCreateNew";
+import EventSearch from "./Event/EventSearch";
 
 function App() {
   return (
@@ -42,17 +42,14 @@ function App() {
         <Route path="/SigninFork">
           <SigninFork/>
         </Route>
-        {/* <Route path="/LandingPage">
-          <LandingPage/>
-        </Route> */}
         <Route path="/ServiceProviderDashboard">
           <ServiceProviderDashboard/>
         </Route>
         <Route path="/EventCreate">
           <EventCreate/>
         </Route>
-        <Route>
-          <EventCreateNew/>
+        <Route path="/EventSearch">
+          <EventSearch/>
         </Route>
       </Switch> 
     </Router>

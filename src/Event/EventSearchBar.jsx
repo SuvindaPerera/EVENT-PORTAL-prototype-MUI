@@ -23,7 +23,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import { borders } from '@mui/system';
-import Filters from './Filters'
+import EventFilters from './EventFilters'
 
 
 
@@ -128,8 +128,8 @@ import Filters from './Filters'
                             </Tabs>
                         </Box>
                     </Grid>
-                    <Grid item xs={12} md={2}>                           
-                            <Filters title='Select Filters'/>
+                    <Grid item xs={12} md={2}>                            
+                            <EventFilters title='Select Filters'/>
                     </Grid>
                 </Grid>
                 </Box>

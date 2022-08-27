@@ -11,8 +11,8 @@ import CloseIcon from '@mui/icons-material/Close';
 import Typography from '@mui/material/Typography';
 import TuneIcon from '@mui/icons-material/Tune';
 import { Box, Grid, Input, Rating, Slider, TextField } from '@mui/material';
-import LocalLocations from './LocalLocations';
-import Categories from './Categories';
+import LocalLocations from '../components/LocalLocations';
+import Categories from '../components/Categories';
 import MuiInput from '@mui/material/Input';
 import StarIcon from '@mui/icons-material/Star';
 
@@ -162,33 +162,7 @@ export default function CustomizedDialogs({title}) {
                     />
                 </Grid>
             </Grid>
-            <Typography variant="body1" mt={1} mb={1}>
-                Rating of the Service Provider
-            </Typography>
-            <Box
-            sx={{
-                width: 200,
-                display: 'flex',
-                alignItems: 'center',
-            }}
-            >
-            <Rating
-                name="hover-feedback"
-                value={valueStar}
-                precision={0.5}
-                getLabelText={getLabelText}
-                onChange={(event, newValue) => {
-                setValueStar(newValue);
-                }}
-                onChangeActive={(event, newHover) => {
-                setHover(newHover);
-                }}
-                emptyIcon={<StarIcon style={{ opacity: 0.55 }} fontSize="inherit" />}
-            />
-            {value !== null && (
-                <Box sx={{ ml: 2 }}>{labels[hover !== -1 ? hover : valueStar]}</Box>
-            )}
-            </Box>
+            
           </Box>
         </DialogContent>
         <DialogActions>

@@ -14,7 +14,7 @@ import UserDashboard from "./userDashboard/UserDashboard";
 import SigninFork from "./SigninFork";
 import LandingPage from "./LandingPage";
 import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProviderDashboard";
-import EventCreate from "./userDashboard/EventCreate";
+import EventCreate from "./Event/EventCreate";
 import EventSearch from "./Event/EventSearch";
 
 function App() {

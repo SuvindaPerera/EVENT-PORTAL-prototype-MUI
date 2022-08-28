@@ -3,7 +3,7 @@ import { Box } from '@mui/system'
 import React from 'react'
 import Feed from './components/Feed'
 import Footer from './components/Footer'
-import Navbar from './components/Navbar'
+import Navbar from './components/LandingPageNavbar'
 import Searchbar from './components/Searchbar'
 
 const Home = () => {

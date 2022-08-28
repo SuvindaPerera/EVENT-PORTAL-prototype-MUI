@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import TextField from '@mui/material/TextField';
-import { Button, Divider, List, ListItem, ListItemText, Pagination, Stack, Tab, Tabs, Typography } from '@mui/material';
+import { Button, Container, Divider, List, ListItem, ListItemText, Pagination, Stack, Tab, Tabs, Typography } from '@mui/material';
 import FormatAlignLeftIcon from '@mui/icons-material/FormatAlignLeft';
 import FormatAlignCenterIcon from '@mui/icons-material/FormatAlignCenter';
 import FormatAlignRightIcon from '@mui/icons-material/FormatAlignRight';
@@ -24,6 +24,7 @@ import Grid from '@mui/material/Grid';
 import { styled } from '@mui/material/styles';
 import { borders } from '@mui/system';
 import Filters from './Filters'
+
 
 
 
@@ -55,8 +56,9 @@ import Filters from './Filters'
     
 
     return (
-        <Box bgcolor={"lightcyan"}  p={3} >
-            <Typography variant="h6" align="center" padding="10px">Search Services Here</Typography>
+        <Container maxWidth="lg" justifyContent="center" align="center">
+        <Box   p={3}  >
+            <h2 class='SearchTitle'>Search Services Here...</h2>
              <Stack      
                 sx={{
                 //   width: 500,
@@ -67,30 +69,31 @@ import Filters from './Filters'
                 >
                 <Grid container spacing={2}>
                     
-                    <Grid item xs={12} md={10}>
+                    <Grid item xs={12} md={12}>
                         
                              <TextField 
                                 fullWidth
                                 label="Quick Search" 
-                                id="SearchServices" 
+                                id="SearchServices"
+                                className="inputRounded"
+                                sx={{
+                                    borderRadius:"50px",
+                                    textAlign: 'center'
+                                }} 
+                                InputProps={{endAdornment: 
+                                <Button
+                                backgroundColor="#00ADB5"
                                 
+                                    sx={{ borderRadius:"50px" }}
+                                >
+                                    <SearchIcon
+                                    fontSize="large"
+                                    
+                                    />
+                                </Button>}}
                                 />
                         
                     </Grid>
-                    <Grid item xs={12} md={2}
-                    align="center"
-                    justify="center" 
-                    >
-                        <Button 
-                            startIcon={<SearchIcon />} 
-                            variant="contained"
-                            fullWidth
-                            sx={{ p: 2, borderRadius:"50px" }}
-                            >
-                            Search
-                         </Button>   
-                    </Grid>
-                    
                 </Grid>
             </Stack>
             
@@ -146,6 +149,7 @@ import Filters from './Filters'
                 </Box>
             </Stack>
         </Box>
+        </Container>
        
     )
   }

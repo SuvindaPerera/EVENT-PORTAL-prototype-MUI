@@ -1,3 +1,9 @@
 .MuiButton-root {
     border-radius: 8px;
   } 
+
+
+  .inputRounded .MuiOutlinedInput-root {
+    border-radius: 50px;
+  }
+  

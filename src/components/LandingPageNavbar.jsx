@@ -17,14 +17,15 @@ import logowhitebg from './logoWhitebg.png'
 
 const StyledToolbar = styled(Toolbar)({
   display: 'flex',
-  justifyContent: 'space-between',
-  backgroundColor:"lightcyan"
+  backgroundColor:"white",
+  justifyContent:"space-between" ,alignContent:"center" ,alignItems:"center",
 })
 
 const Fullscreen= styled(Box)(({theme})=>({
   display: 'none',
   alignItems: 'center',
   gap:"20px",
+
   [theme.breakpoints.up("md")]:{
     display: 'flex',
   }
@@ -34,6 +35,7 @@ const Mobilescreen = styled(Box)(({theme})=>({
   display: 'flex',
   alignItems: 'center',
   gap:"20px",
+
   [theme.breakpoints.up("md")]:{
     display: 'none',
   }
@@ -45,60 +47,63 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" elevation={0} >
-      <StyledToolbar>
+      <StyledToolbar >
     
-        <Box padding="40px">
+        <Box padding="10px" >
         <Link to="/" style={{ textDecoration: 'none' }}>
           <img src={logowhitebg} alt="Logo" height="50px"/>
         </Link>
         </Box>
         <Fullscreen>
-          <Box >
+          <Box margin="center" >
               <Button sx={{ color: '#222831' }}>
-                <Typography>Home</Typography>
+                <h3 class='navbarButtons'>Home</h3>
               </Button>
               <Button sx={{ color: '#222831' }} href="./">
-                <Typography>Events</Typography>
+              <h3 class='navbarButtons'>Events</h3>
               </Button>
               <Button sx={{ color: '#222831' }}>
-                <Typography>Services</Typography>
+              <h3 class='navbarButtons'>Services</h3>
               </Button>
               <Button sx={{ color: '#222831' }}>
-                <Typography>About Us</Typography>
+              <h3 class='navbarButtons'>About</h3>
               </Button>
-              <Link to="../Login" style={{ textDecoration: 'none' }}>
-              <Button sx={{ color: '#fff', borderRadius:"50px", backgroundColor:'#222831' }} variant="contained" ml={1} startIcon={<PersonIcon/>}
-              >
-                Log In
-              </Button>
-              </Link>
               
-            
+          </Box>
+          <Box >
+            <Link to="../Login" style={{ textDecoration: 'none' }} >
+              <Button sx={{ color: '#00ADB5' }} 
+              variant="text"
+              ml={1} 
+              startIcon={<PersonIcon/>}
+              >
+                <h3 >Login</h3>
+              </Button>
+            </Link>   
           </Box>
         </Fullscreen>
+
         <Mobilescreen>
           <Accordion
             sx={{
-              backgroundColor: "lightcyan",
               color: "#222831",
             }}
             elevation={0}
+            disableGutters={true}
           >
             <AccordionSummary
               expandIcon={<ExpandMoreIcon sx={{ color: cyan[500] }}/>}
-              aria-controls="panel1a-content"
-              id="panel1a-header"
-              color="primary"
-              
+              disableGutters={true}
             >
-              <Typography>MENU</Typography>
+              <h3>MENU</h3>
             </AccordionSummary>
+
             <AccordionDetails>
               <ButtonGroup
                   orientation="vertical"
-                  aria-label="vertical outlined button group"
+                  
                 >
-                  <Button sx={{ color:"#222831"}} variant="outlined">
+                  <Button sx={{ color:"#222831", fontWeight:100}} variant="outlined" >
                     Home
                   </Button>
                   <Button sx={{ color:"##222831"}} variant="outlined">
@@ -111,8 +116,8 @@ const Navbar = () => {
                     About Us
                   </Button>
                   <Link to="../SigninSearching" style={{ textDecoration: 'none' }}>
-                  <Button sx={{ color: '#fff' }} variant="contained" ml={1} startIcon={<PersonIcon/>}  >
-                    Log In
+                  <Button sx={{ color: '#fff', backgroundColor: '#222831', elevation:0 }} variant="contained"  startIcon={<PersonIcon/>}  >
+                    <h4>Log In</h4>
                   </Button>
                   </Link>
               </ButtonGroup>

@@ -32,10 +32,6 @@ const Feed = () => {
           <Cardcomp />
         </Stack>
         </Box>
-
-
-
-      
       <Box display='flex' justifyContent='center'mt={5} >
         <Button variant="contained"
           size="large"

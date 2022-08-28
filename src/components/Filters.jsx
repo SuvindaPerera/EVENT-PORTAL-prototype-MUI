@@ -113,7 +113,7 @@ export default function CustomizedDialogs({title}) {
       onClick={handleClickOpen}
       style={{textTransform: 'none'}} 
             startIcon={<TuneIcon />} 
-            variant="outlined"
+            variant="text"
             fullWidth
             sx={{ p: 2, borderRadius:"50px" }}
         >

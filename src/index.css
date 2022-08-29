@@ -18,6 +18,7 @@ body {
 
 .navbarButtons{
   font-weight: 500;
+  color:#222831 ;
 }
 .navbarButtons:hover{
   font-weight: 600;
@@ -26,3 +27,33 @@ body {
 .navbarLoginButton:hover{
   color:#222831 ;
 }
+
+.bottomContent-buttons{
+  font-weight: 300;
+  font-size: 1rem;
+}
+.bottomContent-buttons:hover{
+  font-weight: 500;
+  color: aqua;
+
+}
+
+.bottomContent-title{
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+
+*{
+  box-sizing: border-box;
+}
+
+.searchContainer{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+

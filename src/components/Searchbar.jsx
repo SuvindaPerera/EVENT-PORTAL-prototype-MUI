@@ -58,7 +58,11 @@ import Filters from './Filters'
     return (
         <Container maxWidth="lg" justifyContent="center" align="center">
         <Box   p={3}  >
-            <h2 class='SearchTitle'>Search Services Here...</h2>
+            <h2 class='SearchTitle'
+            sx={{ display: { xs: 'block', sm: 'none' } }}
+            >
+                Search Services Here...
+            </h2>
              <Stack      
                 sx={{
                 //   width: 500,

@@ -55,17 +55,17 @@ const Navbar = () => {
         </Link>
         </Box>
         <Fullscreen>
-          <Box margin="center" >
-              <Button sx={{ color: '#222831' }}>
+          <Box >
+              <Button >
                 <h3 class='navbarButtons'>Home</h3>
               </Button>
-              <Button sx={{ color: '#222831' }} href="./">
+              <Button  href="./">
               <h3 class='navbarButtons'>Events</h3>
               </Button>
-              <Button sx={{ color: '#222831' }}>
+              <Button >
               <h3 class='navbarButtons'>Services</h3>
               </Button>
-              <Button sx={{ color: '#222831' }}>
+              <Button >
               <h3 class='navbarButtons'>About</h3>
               </Button>
               

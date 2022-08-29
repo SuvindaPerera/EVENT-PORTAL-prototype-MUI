@@ -1,3 +1,4 @@
+import {createTheme, colors, ThemeProvider} from "@mui/material"
 import Feed from "./components/Feed";
 import Sidebar from "./components/Sidebar";
 import Rightbar from "./components/Rightbar";
@@ -17,8 +18,20 @@ import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProvider
 import EventCreate from "./Event/EventCreate";
 import EventSearch from "./Event/EventSearch";
 
+
+
+
 function App() {
+  const theme = createTheme({
+    pallete: {
+      primary: {
+        main: "#000000",
+      }
+    }
+  })
+
   return (
+    <ThemeProvider theme={theme}>
     <Router>
       <Switch>
         <Route exact path="/">
@@ -53,6 +66,7 @@ function App() {
         </Route>
       </Switch> 
     </Router>
+    </ThemeProvider>
     
   );
 }

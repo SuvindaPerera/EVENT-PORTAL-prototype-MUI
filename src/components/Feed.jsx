@@ -41,7 +41,7 @@ const Feed = () => {
         </Button>
       </Box>
       
-      <BottomContent/>
+      {/* <BottomContent/> */}
     </Box>
   )
 }

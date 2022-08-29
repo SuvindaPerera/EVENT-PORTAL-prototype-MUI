@@ -17,35 +17,39 @@ const BottomContent = () => {
       }));
 
   return (
-    <Box sx={{ flexGrow: 1 }} mt={5}>
+    <Box sx={{ flexGrow: 1 }} mt={5} >
       <Grid container spacing={2}  mb={2} >
         <Grid item xs={12} md={4} >
-          <Item elevation={3} sx={{bgcolor:'#222831', color:'#fff',  height: "100%" }}>
-            <Typography variant='h6'>
-                Top Services
-            </Typography>
+          <Item elevation={0} sx={{bgcolor:'#222831', color:'#fff',  height: "100%", elevation: "0"}}>
+            <h2 class="bottomContent-title">
+              Top Services
+            </h2>
             <Divider variant="middle" color="white"/>
-            <List>
+            <List >
                 <ListItemButton>
-                    <ListItemText primary="1. Weddings" />
+                    <h3 class="bottomContent-buttons">Weddings</h3>
                 </ListItemButton>
                 <ListItemButton>
-                    <ListItemText primary="2. Birthday Parties" />
+                <h3 class="bottomContent-buttons">Birthday Parties</h3>
                 </ListItemButton>
                 <ListItemButton>
-                    <ListItemText primary="3. Funerals" />
+                <h3 class="bottomContent-buttons">Funerals</h3>
                 </ListItemButton>
             </List>
-            <Button variant='contained' text-decoration="none">
+            <Button 
+            variant='contained' 
+            text-decoration="none"
+            
+            >
                 See more...
             </Button>
           </Item>
         </Grid>
         <Grid item xs={12} md={4}>
           <Item elevation={3} sx={{bgcolor:'#222831', color:'#fff', height: "100%",  }}>
-            <Typography variant='h6'>
-                Overview
-            </Typography>
+            <h2 class="bottomContent-title">
+              Overview
+            </h2>
             <Divider variant="middle" color="white"/>
             <List>
                 <ListItemButton>

@@ -55,7 +55,7 @@ const Navbar = () => {
         </Link>
         </Box>
         <Fullscreen>
-          <Box margin="center" >
+          <Box sx={{alignContent:'center',alignItems:'center'}} >
               <Button sx={{ color: '#222831' }}>
                 <h3 class='navbarButtons'>Home</h3>
               </Button>
@@ -67,9 +67,9 @@ const Navbar = () => {
               </Button>
               <Button sx={{ color: '#222831' }}>
               <h3 class='navbarButtons'>About</h3>
-              </Button>
-              
+              </Button>              
           </Box>
+
           <Box >
             <Link to="../Login" style={{ textDecoration: 'none' }} >
               <Button sx={{ color: '#00ADB5' }} 

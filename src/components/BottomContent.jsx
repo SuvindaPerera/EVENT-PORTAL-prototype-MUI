@@ -27,13 +27,13 @@ const BottomContent = () => {
             <Divider variant="middle" color="white"/>
             <List>
                 <ListItemButton>
-                    <ListItemText primary="1. Weddings" />
+                    <ListItemText primary="Weddings" />
                 </ListItemButton>
                 <ListItemButton>
-                    <ListItemText primary="2. Birthday Parties" />
+                    <ListItemText primary="Birthday Parties" />
                 </ListItemButton>
                 <ListItemButton>
-                    <ListItemText primary="3. Funerals" />
+                    <ListItemText primary="Funerals" />
                 </ListItemButton>
             </List>
             <Button variant='contained' text-decoration="none">

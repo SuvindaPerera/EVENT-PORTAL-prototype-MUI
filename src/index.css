@@ -16,6 +16,12 @@ body {
   margin-bottom: 10px;
 }
 
+.BrowseTitle{
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #222831;
+}
+
 .navbarButtons{
   font-weight: 500;
   color:#222831 ;
@@ -33,8 +39,8 @@ body {
   font-size: 1rem;
 }
 .bottomContent-buttons:hover{
-  font-weight: 500;
-  color: aqua;
+  font-weight: 600;
+  color: #00ADB5;
 
 }
 
@@ -45,9 +51,7 @@ body {
 }
 
 
-*{
-  box-sizing: border-box;
-}
+
 
 .searchContainer{
   display: flex;
@@ -57,3 +61,26 @@ body {
   width: 100vw;
 }
 
+.viewMoreButton{
+  font-weight: 500;
+  color:#222831 ;
+}
+
+.bottomButtons{
+  font-weight: 300;
+  color:#fff ;
+}
+
+.footerDec{
+  font-size: .8em;
+}
+
+/* SERVICE CARD STYLES */
+.serviceCardTitle{
+  font-size: 1.75em;
+  font-weight: 400;
+}
+.serviceCardCategory{
+  font-size: 1.25em;
+  font-weight: 700;
+}

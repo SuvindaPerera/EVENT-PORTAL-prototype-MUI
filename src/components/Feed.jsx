@@ -6,42 +6,31 @@ import Cardcomp from "./Cardcomp.jsx";
 const Feed = () => {
   return (
     <Box  flex={4} p={2} mt={2} bgcolor="#F5F5F5">
-        <Typography variant="h6" mb={2}>
-            Browse Service
-        </Typography>
+        <h3 class="BrowseTitle">
+          Browse Services
+        </h3>
         
         <Box sx={{display:{xs:"none",md:"block"}}}>
-        <Box display="flex" justifyContent="space-evenly" mt={5}>
-          <Cardcomp />
-          <Cardcomp />
-          <Cardcomp />
+        <Box display="flex"  padding={5}>
           <Cardcomp />
         </Box>
-        <Box display="flex" justifyContent="space-evenly" mt={5}>
-          <Cardcomp />
-          <Cardcomp />
-          <Cardcomp />
-          <Cardcomp />
-        </Box>
-        </Box>
-        <Box sx={{display:{xs:"block",md:"none"}}}>
-        <Stack  spacing={3}  mt={5} justifyContent="center">
-          <Cardcomp />
-          <Cardcomp />
-          <Cardcomp />
-          <Cardcomp />
-        </Stack>
         </Box>
       <Box display='flex' justifyContent='center'mt={5} >
-        <Button variant="contained"
+        <Button variant="outlined"
           size="large"
-          sx={{  borderRadius:"50px" }}
-        >
-          View More
+          sx={{  borderRadius:"50px",
+          maxHeight:"50px",
+          textTransform: 'none',
+          color: '#00ADB5',
+          border : '2px solid #00ADB5',
+         }}
+         >
+         <h3 class='viewMoreButton'
+          style={{ textDecoration: 'none' }}
+         >View More...</h3> 
         </Button>
       </Box>
-      
-      {/* <BottomContent/> */}
+    
     </Box>
   )
 }

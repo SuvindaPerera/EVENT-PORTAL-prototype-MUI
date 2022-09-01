@@ -8,14 +8,28 @@ import StarIcon from '@mui/icons-material/Star';
 import { yellow } from '@mui/material/colors';
 import { Box } from '@mui/system';
 import LocationOnIcon from '@mui/icons-material/LocationOn';
+import { borders } from '@mui/system';
+
 
 export default function ActionAreaCard() {
   return (
-    <Card sx={{ maxWidth: 345 }}>
+    <Card elevation={0} 
+      sx={{ 
+      maxWidth: 345, 
+      borderRadius:3, 
+       
+      borderHeight:10,
+      "&:hover": {
+      borderBottom:5,
+      borderBottomColor:'#00ADB5',
+
+    },
+      }}
+      >
       <CardActionArea>
         <CardMedia
           component="img"
-          height="200"
+          height="200vh"
           image="https://images.pexels.com/photos/931796/pexels-photo-931796.jpeg?cs=srgb&dl=pexels-nghia-trinh-931796.jpg&fm=jpg"
           alt="Vision Photography"
         />
@@ -32,12 +46,12 @@ export default function ActionAreaCard() {
                 </Typography>
                 
             </Stack> 
-          <Typography gutterBottom variant="h5" component="div">
+          <h3 class='serviceCardTitle'>
             Vision Photography
-          </Typography>
-          <Typography variant="body2" >
+          </h3>
+          <h5 class='serviceCardCategory'>
             Photography
-          </Typography>
+          </h5>
           <Box display="flex" justifyContent="flex-end">
             <LocationOnIcon fontSize='small'/>
             <Typography variant="subheading2">

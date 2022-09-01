@@ -72,7 +72,7 @@ import Filters from './Filters'
                 direction="row" 
                 >
                 <Grid container spacing={2}>
-                    
+                     
                     <Grid item xs={12} md={12}>
                         
                              <TextField 
@@ -114,39 +114,73 @@ import Filters from './Filters'
                                 allowScrollButtonsMobile
                                 aria-label="scrollable force tabs example"
                                 width="100%"
-                                centered    
+                                centered 
                             >
-                                <Tab icon={<CastleIcon />} label="Conferences" />
-                                <Tab icon={<CoPresentIcon />}label="Seminars" />
-                                <Tab icon={<PeopleIcon />}label="Internal Company" />
-                                <Tab icon={<GroupsIcon />}label="Meeting/ Periodic" />
-                                <Tab icon={<FortIcon />}label="Trade shows/ Expos" />
-                                <Tab icon={<CastleIcon />}label="Leadership Events" />
-                                <Tab icon={<CastleIcon />}label="Networking Events" />
-                                <Tab icon={<CastleIcon />}label="Ceremonies/ Gala" />
-                                <Tab icon={<CastleIcon />}label="Product Launches" />
-                                <Tab icon={<CastleIcon />}label="VIP Events" />
-                                <Tab icon={<CastleIcon />}label="Weddings" />
-                                <Tab icon={<CastleIcon />}label="Funerals" />
-                                <Tab icon={<CastleIcon />}label="Birthday Parties" />
-                                <Tab icon={<CastleIcon />}label="Business Gatherings" />
-                                <Tab icon={<CastleIcon />}label="Graduation Parties" />
-                                <Tab icon={<CastleIcon />}label="Other" />
+                                <Tab icon={<CastleIcon />} label={<h4>Conferences</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CoPresentIcon />}label={<h4>Seminars</h4>} 
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<PeopleIcon />}label={<h4>Anniversaries</h4>} 
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<GroupsIcon />}label={<h4>Meeting/ Periodic</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<FortIcon />}label={<h4>Trade shows/ Expos</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Leadership Events</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Concerts</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Ceremonies/ Gala</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<CastleIcon />}label={<h4>Product Launches</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<CastleIcon />}label={<h4>VIP Events</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Weddings</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<CastleIcon />}label={<h4>Funerals</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Birthday Parties</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<CastleIcon />}label={<h4>Business Gatherings</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }} />
+                                <Tab icon={<CastleIcon />}label={<h4>Graduation Parties</h4>}
+                                sx={{
+                                    textTransform: 'none',
+                                }}  />
+                                <Tab icon={<CastleIcon />}label={<h4>Other</h4>} />
                             </Tabs>
                         </Box>
                     </Grid>
                     <Grid item xs={12} md={2}>
-                            {/* <Button 
-                                style={{textTransform: 'none'}} 
-                                startIcon={<TuneIcon />} 
-                                variant="outlined"
-                                href="#"
-                                fullWidth
-                                sx={{ p: 2, borderRadius:"50px" }}
-                            
-                                >
-                                <Typography>Filters</Typography>
-                            </Button> */}
                             <Filters title='Select Filters'/>
                     </Grid>
                 </Grid>

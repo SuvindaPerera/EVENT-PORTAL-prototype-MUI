@@ -24,7 +24,7 @@ import { Link } from 'react-router-dom';
 
 const UDleftbar = () => {
   return (
-    <div>
+    <div className="userDashboardEventContainer">
       <h1>LeftBar</h1>
     </div>
   )

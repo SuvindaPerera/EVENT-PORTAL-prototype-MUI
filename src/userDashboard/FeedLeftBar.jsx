@@ -12,7 +12,7 @@ import EventBidCard from './EventBidCard';
 const FeedLeftBar = () => {
   return (
     <div>
-      <Box bgcolor={"lightcyan"}  display={"flex"}  height="100vh" flex={10} p={3} >
+      <Box  display={"flex"}  flex={10} p={3} >
         <EventBidCard />
       </Box>
     </div>

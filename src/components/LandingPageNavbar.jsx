@@ -25,7 +25,7 @@ const Fullscreen= styled(Box)(({theme})=>({
   display: 'none',
   alignItems: 'center',
   gap:"20px",
-
+  
   [theme.breakpoints.up("md")]:{
     display: 'flex',
   }
@@ -47,15 +47,16 @@ const Navbar = () => {
 
   return (
     <AppBar position="static" elevation={0} >
+      <div className="navbarMenu">
       <StyledToolbar >
     
-        <Box padding="10px" >
+        <div padding="10px">
         <Link to="/" style={{ textDecoration: 'none' }}>
           <img src={logowhitebg} alt="Logo" height="50px"/>
         </Link>
-        </Box>
+        </div>
         <Fullscreen>
-          <Box >
+          <div className='navbarMenuItems'>
               <Button >
                 <h3 class='navbarButtons'>Home</h3>
               </Button>
@@ -69,8 +70,8 @@ const Navbar = () => {
               <h3 class='navbarButtons'>About</h3>
               </Button>
               
-          </Box>
-          <Box >
+          </div>
+          <div >
             <Link to="../Login" style={{ textDecoration: 'none' }} >
               <Button sx={{ color: '#00ADB5' }} 
               variant="text"
@@ -80,7 +81,7 @@ const Navbar = () => {
                 <h3 >Login</h3>
               </Button>
             </Link>   
-          </Box>
+          </div>
         </Fullscreen>
 
         <Mobilescreen>
@@ -126,7 +127,7 @@ const Navbar = () => {
         </Mobilescreen>
           
       </StyledToolbar>
-        
+      </div> 
 
     </AppBar>
   )

@@ -5,7 +5,7 @@ import Cardcomp from "./Cardcomp.jsx";
 
 const Feed = () => {
   return (
-    <Box  flex={4} p={2} mt={2} bgcolor="#F5F5F5">
+    <Box p={2} mt={2} bgcolor="#F5F5F5">
         <h3 class="BrowseTitle">
           Browse Services
         </h3>

@@ -13,8 +13,6 @@ const UDrightbar = () => {
         </Typography>
         <Stack spacing={3} mt={2}>
           <Cardcomp/>
-          <Cardcomp/>
-          <Cardcomp/>
         </Stack>
       </Box>
 
@@ -25,8 +23,6 @@ const UDrightbar = () => {
           Suggested Services
         </Typography>
         <Stack spacing={3} mt={2}>
-          <Cardcomp/>
-          <Cardcomp/>
           <Cardcomp/>
         </Stack>
 

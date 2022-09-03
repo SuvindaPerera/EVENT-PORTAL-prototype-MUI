@@ -14,6 +14,8 @@ const LocalLocations = () => {
             id="locationSearch"
             clearOnEscape
             margin="dense"
+            isOptionEqualToValue={(option, value) => option.title === value.title}
+            onChange={(event, value) => console.log(value)}
             renderInput={(params) => (
             <TextField {...params} label="Event Category"  
             variant="standard" 

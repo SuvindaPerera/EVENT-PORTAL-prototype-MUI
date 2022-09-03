@@ -94,7 +94,8 @@ const BottomContent = () => {
               alt="Map" 
               height="200vh"/>
             </Box>
-            <Button 
+            <Button
+              
               variant="text"
               size="large"
                 sx={{  borderRadius:"50px",

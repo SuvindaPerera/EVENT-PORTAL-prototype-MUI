@@ -26,6 +26,12 @@ body {
   font-weight: 500;
   color:#222831 ;
 }
+
+.navbarUserButtons{
+  font-weight: 500;
+  color:#fff ;
+}
+
 .navbarButtons:hover{
   font-weight: 600;
 }
@@ -77,7 +83,7 @@ body {
   font-size: .8em;
 }
 
-/* SERVICE CARD STYLES */
+/* SERVICE CARD STYLES---------------------------------------------- */
 .serviceCardTitle{
   font-size: 1.75em;
   font-weight: 400;
@@ -90,10 +96,68 @@ body {
 /* 
 USER DASHBOARD---------------------------------------------------------------- */
 
-.userDashboardEventContainer{
+/* .userDashboardEventContainer{
   align-items: center;
   justify-content: center;
+  height: 'auto';
+} */
+.userDashboardTitle{
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #fff;
 }
+.searchUserBar .MuiOutlinedInput-root{
+  border-radius: 100px;
+  background-color:#fff;
+}
+.userSearchButton{
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.userEventListName{
+  font-weight: 300;
+  font-size: 1rem;
+  margin: 0;
+  color: #fff;
+}
+
+.userCreateEventButton{
+  font-weight: 500;
+  font-size: 0.8rem;
+  margin: 0;
+  color: #fff;
+}
+
+.userFeedTitle{
+  font-weight: 500;
+  font-size: 1.25rem;
+  margin: 0;
+  padding: 20px;
+  text-align: center;
+  color: #222831
+}
+.userEventSubheading{
+  font-weight: 300;
+  font-size: 0.8rem;
+  margin: 0;
+  color: #fff;
+  padding-top: 20px;
+}
+.userEventCloseIcon{
+  display: block;
+  align-items: right;
+  margin-left: auto;
+}
+/* .userFab{
+  margin: 0px;
+  top: auto;
+  right: 20px;
+  bottom: 20px;
+  left: auto;
+  position: fixed;
+} */
 
 /* EVENT BIDCARD------------------------------------------------------------------ */
 

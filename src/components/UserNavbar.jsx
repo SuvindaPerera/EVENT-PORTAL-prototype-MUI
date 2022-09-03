@@ -10,7 +10,8 @@ import { Link } from 'react-router-dom';
 const StyledToolbar = styled(Toolbar)({
   display: 'flex',
   justifyContent: 'space-between',
-  backgroundColor:"#222831"
+  backgroundColor:"#222831",
+  elevation: 0,
 })
 
 const Fullscreen= styled(Box)(({theme})=>({
@@ -60,20 +61,20 @@ const Navbar = () => {
     <AppBar position="sticky" >
       <StyledToolbar>
         
-        <Box padding="20px" sx={{
+        <Box padding="10px" sx={{
                 display: {xs:"none",md:"block"},
             }}>
         <img src={logo} alt="Logo" height="50px"/>
         </Box>
         
          
-        <Box padding="20px" sx={{
+        <Box padding="10px" sx={{
                 display: {xs:"block",md:"none"},
             }}>
         <img src={FooterLogo} alt="Logo" height="50px" />
         </Box>
         
-        <Box padding="20px" sx={{
+        <Box padding="10px" sx={{
                 display: {xs:"block",md:"none"},
             }}>
             <img src={LogoWord} alt="Logo" height="30px" />
@@ -84,27 +85,21 @@ const Navbar = () => {
           <Box display="flex" gap={2}>
             <Link to="/" style={{ textDecoration: 'none' }}>
               <Button sx={{ color: '#fff' }}>
-                <Typography>Home</Typography>
+                <h3 class='navbarUserButtons'>Home</h3>
               </Button>
               </Link>
               <Button sx={{ color: '#fff' }}>
-                <Typography>Events</Typography>
+                <h3 class='navbarUserButtons'>Events</h3>
               </Button>
               <Button sx={{ color: '#fff' }}>
-                <Typography>Services</Typography>
+                <h3 class='navbarUserButtons'>Services</h3>
               </Button>
               <Button sx={{ color: '#fff' }}>
-                <Typography>About Us</Typography>
+                <h3 class='navbarUserButtons'>About Us</h3>
               </Button>
-              {/* <Link to="../Login" style={{ textDecoration: 'none' }}>
-              <Button sx={{ color: '#fff', borderRadius:"50px" }} variant="contained" ml={1} startIcon={<PersonIcon/>}
-              >
-                Log In
-              </Button>
-              </Link> */}
               <IconButton>
-                <Badge badgeContent={4} color="primary">
-                <NotificationsIcon style={{ color: "white"}} />
+                <Badge badgeContent={4} color="info">
+                  <NotificationsIcon style={{ color: "#fff"}} />
                 </Badge>
               </IconButton>
 
@@ -132,7 +127,7 @@ const Navbar = () => {
                 >
                 {settings.map((setting) => (
                     <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                    <Typography textAlign="center">{setting}</Typography>
+                    <p>{setting}</p>
                     </MenuItem>
                 ))}
             </Menu>
@@ -171,7 +166,7 @@ const Navbar = () => {
             >
               {settingsMobile.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <p>{page}</p>
                 </MenuItem>
               ))}
             </Menu>

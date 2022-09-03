@@ -16,11 +16,12 @@ export default function BasicCard() {
   return (
     <Card sx={{ 
       minWidth: '100%',
-      p: 2, 
+      m: 2,
       height: '100%',
       width: '100%',
-      backgroundColor:'#f2f2f2',
-      boxShadow: 0, 
+      backgroundColor:'#f5f5f5',
+      boxShadow: 0,
+      borderRadius: '10px' 
       }}  >
       <CardContent>
         <Box 

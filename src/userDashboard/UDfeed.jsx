@@ -1,21 +1,36 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
+import { Box, Grid, Typography } from '@mui/material'
 import FeedLeftBar from './FeedLeftBar'
+import EventBidCard from './EventBidCard'
 
 
 const UDfeed = () => {
+
+  const eventName = "Birthday Party";
+
   return (
-    <Box flex={10}>
-      <Typography 
-        variant="h6"
-        display="flex"
-        justifyContent={"center"}
-        mt={3}
-        mb={3}
-      >
-        Service Providers who got in touch with
-      </Typography>
-      <FeedLeftBar />
+    <Box flex={12} p={3} backgroundColor="#fff">
+      <h3 className="userFeedTitle">
+        Service providers who bidded for {eventName}
+      </h3>
+      <Box 
+        style={{maxHeight: '100vh', overflowY: "auto", overflowX: "hidden"}}
+        > 
+      <Grid container spacing={1}>
+        <Grid item  xs={12} md={12}>
+          <EventBidCard />
+        </Grid>
+        <Grid item  xs={12} md={12}>
+          <EventBidCard />
+        </Grid>
+        <Grid item  xs={12} md={12}>
+          <EventBidCard />
+        </Grid>
+        
+      </Grid> 
+      </Box>
+        
+      
     </Box>
   )
 }

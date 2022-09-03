@@ -7,7 +7,9 @@ import BottomContent from './BottomContent'
 const Footer = () => {
   
   return (
-    <Box bgcolor={"#1A2027"}>
+    <Box bgcolor={"#1A2027"}
+    sx={{zIndex: '1', position: 'relative'}} 
+    >
       <Stack   
               p={2}
               color="#fff" 

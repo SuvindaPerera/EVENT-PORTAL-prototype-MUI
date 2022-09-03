@@ -95,7 +95,6 @@ const BottomContent = () => {
               height="200vh"/>
             </Box>
             <Button
-              
               variant="text"
               size="large"
                 sx={{  borderRadius:"50px",

@@ -17,6 +17,7 @@ import LandingPage from "./LandingPage";
 import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProviderDashboard";
 import EventCreate from "./Event/EventCreate";
 import EventSearch from "./Event/EventSearch";
+import SPDisplay from "./ServiceproviderDisplay/SPDisplay";
 
 
 
@@ -57,6 +58,9 @@ function App() {
         </Route>
         <Route path="/EventSearch">
           <EventSearch/>
+        </Route>
+        <Route path="/ServiceProviderDetails">
+          <SPDisplay/>
         </Route>
       </Switch> 
     </Router>

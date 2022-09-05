@@ -19,114 +19,155 @@ import { Button, Divider, TextField, Typography } from '@mui/material';
 import SearchIcon from '@mui/icons-material/Search';
 import AddIcon from '@mui/icons-material/Add';
 import DeleteIcon from '@mui/icons-material/Delete';
+import ListItem from '@mui/material/ListItem';
+import ClearIcon from '@mui/icons-material/Clear';
+import { useState } from 'react'
+import UpdateIcon from '@mui/icons-material/Update';
+import ManageSearchIcon from '@mui/icons-material/ManageSearch';
+import Events from '../sampleData/events.json'
 
 
 export default function NestedList() {
-  const [open, setOpen] = React.useState(true);
 
-  const handleClick = () => {
-    setOpen(!open);
-  };
+  // USER EVENT LIST----------------------------
+  const eventName = "Birthday Party";
+
+  //BUTTON SUBMIT SEARCH ----------------------------
+  const [search,setSearch] = useState("");
+  const handleSubmit = (e) =>{
+    e.preventDefault();
+    console.log(search);
+  }
+  
+  //SEARCH FILTER-----------------------------------
+  const [searchFilter,setSearchFilter] = useState("");
+  
 
   return (
-    <Box>
-
-    
-    <Box bgcolor={"#222831"} flex={2} p={2} minHeight='100%' maxWidth='200px'
-    // sx={{display:{xs:"none",md:"block", minHeight:'100%'}}}
-    >
-      <Typography color="#fff" variant="H6" 
-      
-      >
-        My Services
-      </Typography>
-      <Divider  color="white" />
+    <div className="userDashboardEventContainer">
+      <Box 
+        height='100vh'
+        width={300}
+        bgcolor={"#30353D"} 
+        p={2} 
+        // sx={{display:{xs:"none",md:"block"}}}
+       >
+      <h3 className="userDashboardTitle">
+        My Bidded Events
+      </h3>
+      <Divider  variant="middle" color="white" />
       <Box
         sx={{
-          
           maxWidth: '100%',
         }}
-        mb={3}
-        mt={3}
-        backgroundColor={"white"}
-      >
-        <TextField fullWidth label="Search Your Services Here.." id="searchEvent" />
-      </Box>
-      <Button sx={{ color: '#fff', borderRadius:"50px" }} variant="contained" mb={3} startIcon={<SearchIcon/>}
-              >
-                Search
-      </Button>
-     <Box  mt={3}>   
-    <List
-      sx={{ width: '100%', maxWidth: 360, bgcolor: '#222831', color: '#fff' }}
-     
-      component="nav"
-      aria-labelledby="myevents-list"
-      // subheader={
-      //   <ListSubheader component="div" id="myevents-list" backgroundColor="lightcyan">
-      //     My Events
-      //   </ListSubheader>
-      // }
-    >
-      <ListItemButton>
-        <ListItemIcon>
-          <CalendarMonthIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="All Services" />
-      </ListItemButton>
-      <Divider  color="white" />
-      
-      <ListItemButton>
-        <ListItemIcon>
-          <EventAvailableIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Bidded Events" />
-      </ListItemButton>
-
-      <ListItemButton onClick={handleClick}>
-        <ListItemIcon>
-          <AccessAlarmIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Accepted Events" />
-        {open ? <ExpandLess /> : <ExpandMore />}
-      </ListItemButton>
-      <Collapse in={open} timeout="auto" unmountOnExit>
-        <List component="div" disablePadding 
+        mt={2}
+        mb={2}
+        backgroundColor='#30353D'
         >
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Birthday Photographer needed" secondary="Jan 2, 2022"  />
-          </ListItemButton>
-          <ListItemButton sx={{ pl: 4 }}>
-            <ListItemIcon>
-              <StarBorder />
-            </ListItemIcon>
-            <ListItemText primary="Welcome party" secondary="Jan 2, 2022"  />
-          </ListItemButton>
-        </List>
-      </Collapse>
-      <Divider  color="white" />
-      <ListItemButton>
-        <ListItemIcon>
-          <AddIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Add a Service" />
-      </ListItemButton>
-      <Divider  color="white" />
-      <ListItemButton>
-        <Button variant='contained' style={{ color: 'white' , borderRadius: '50px' }}>
-            Search for a open event
-        </Button>
-        {/* <ListItemIcon>
-          <DeleteIcon style={{ color: 'white' }}/>
-        </ListItemIcon>
-        <ListItemText primary="Search for open events" /> */}
-      </ListItemButton>
-    </List>
-    </Box>
-    </Box>
-    </Box>
+
+          {/* EVENT SEARCH BAR---------------------------------------------------- */}
+        <TextField 
+          onChange={(e) => setSearchFilter(e.target.value)}
+          className="searchUserBar"
+          fullWidth 
+          placeholder='Search bidded events ' 
+          id="searchEvent"
+          sx={{
+            borderRadius: '50px',
+            textAlign: 'center',
+          }}  
+        />
+       </Box>
+
+          {/* DIVIDER---------------------------------------------------- */}
+        <Divider variant="middle" color="white"/>
+
+        <p className="userEventSubheading">Events You have Bidded</p> 
+        <Box 
+        mt={3}
+        style={{maxHeight: '30vh', overflow: 'auto'}}
+        >
+           {/* USER EVENT LIST---------------------------------------------------- */}
+          <List>
+            {Events.filter((eve)=>{
+              if(searchFilter === ""){
+                return eve
+              }else if(eve.eventName.toLowerCase().includes(searchFilter.toLowerCase())){
+                return eve
+              }
+            }).map((event) => (
+              <ListItem key={event.id} disablePadding>
+                <ListItemButton>
+                  <p className="userEventListName">{event.eventName}</p>
+                </ListItemButton>
+                <ListItemButton sx={{ alignItems:'flex-end' }} >
+                  <div className="userEventCloseIcon">
+                    <ClearIcon color="error" />
+                  </div>
+                </ListItemButton>
+              </ListItem>
+            ))}
+          </List>
+        </Box>
+        <div
+          display="flex"
+          justifyContent= 'flex-end'
+        >
+
+        <Divider color="white" variant="middle" sx={{marginTop: 3}}/>
+          {/* CREATE NEW EVENT BUTTON---------------------------------------------------- */}
+          <Button
+              fullWidth="true"
+              variant="contained"
+              size="medium"
+                sx={{  borderRadius:"50px",
+               maxHeight:"50px",
+               textTransform: 'none',
+               justifyContent: 'center',
+               color: '#fff',
+               backgroundColor: '#00ADB5',
+               marginTop: '20px',
+                "&:hover": {
+                  backgroundColor: "#1A2027",
+                  border : '2px solid #00ADB5',
+                }
+              }}
+              text-decoration="none"
+              href="/ServiceProviderDetails"
+              endIcon={<UpdateIcon color="inherit"/>}
+              >
+                <h3 className="userCreateEventButton">
+                  Update my Page
+                </h3>
+          </Button>
+
+          {/* SEACRH FOR NEW EVENT BUTTON---------------------------------------------------- */}
+          <Button
+              fullWidth="true"
+              variant="contained"
+              size="medium"
+                sx={{  borderRadius:"50px",
+               maxHeight:"50px",
+               textTransform: 'none',
+               justifyContent: 'center',
+               color: '#fff',
+               backgroundColor: '#00ADB5',
+               marginTop: '20px',
+                "&:hover": {
+                  backgroundColor: "#1A2027",
+                  border : '2px solid #00ADB5',
+                }
+              }}
+              text-decoration="none"
+              href="/Home"
+              endIcon={<ManageSearchIcon color="inherit"/>}
+              >
+                <h3 className="userCreateEventButton">
+                  Search for New Events
+                </h3>
+          </Button>
+        </div>
+      </Box>
+    </div>
   );
 }

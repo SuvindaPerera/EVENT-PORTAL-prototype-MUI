@@ -8,6 +8,7 @@ import ListItem from '@mui/material/ListItem';
 import ClearIcon from '@mui/icons-material/Clear';
 import { useState } from 'react'
 import InputAdornment from '@mui/material/InputAdornment';
+import Events from '../sampleData/events.json'
 
 
 const UDleftbar = () => {
@@ -22,20 +23,6 @@ const handleSubmit = (e) =>{
   console.log(search);
 }
 
-//USER EVENTS-------------------------------------
-const [userEvents,setUserEvents] = useState([
-  {id:1, eventName:"Birthday Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:2, eventName:"Wedding", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:3, eventName:"Anniversary", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:4, eventName:"Graduation", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:6, eventName:"Christmas Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:7, eventName:"New Year Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:8, eventName:"Halloween Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:9, eventName:"Thanksgiving Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:10, eventName:"Valentine Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:11, eventName:"Easter Party", eventDate:"2021-10-10", eventTime:"10:00"},
-  {id:13, eventName:"Independence Day Party", eventDate:"2021-10-10", eventTime:"10:00"},
-]);
 
 //SEARCH FILTER-----------------------------------
 const [searchFilter,setSearchFilter] = useState("");
@@ -44,7 +31,7 @@ const [searchFilter,setSearchFilter] = useState("");
   return (
     <div className="userDashboardEventContainer">
       <Box 
-        minHeight={'100%'}
+        minHeight='100vh'
         width={300}
         bgcolor={"#30353D"} 
         p={2} 
@@ -53,7 +40,7 @@ const [searchFilter,setSearchFilter] = useState("");
       <h3 className="userDashboardTitle">
         My Events
       </h3>
-      <Divider  color="white" />
+      <Divider variant='middle' color="white" />
       <Box
         sx={{
           maxWidth: '100%',
@@ -78,15 +65,16 @@ const [searchFilter,setSearchFilter] = useState("");
        </Box>
 
           {/* DIVIDER---------------------------------------------------- */}
-        <Divider color="white"/>
+        <Divider variant="middle" color="white"/>
+
         <p className="userEventSubheading">Events You have created</p> 
         <Box 
         mt={3}
-        style={{maxHeight: 400, overflow: 'auto'}}
+        style={{maxHeight: '30vh', overflow: 'auto'}}
         >
            {/* USER EVENT LIST---------------------------------------------------- */}
           <List>
-            {userEvents.filter((eve)=>{
+            {Events.filter((eve)=>{
               if(searchFilter === ""){
                 return eve
               }else if(eve.eventName.toLowerCase().includes(searchFilter.toLowerCase())){
@@ -110,6 +98,8 @@ const [searchFilter,setSearchFilter] = useState("");
           display="flex"
           justifyContent= 'flex-end'
         >
+
+        <Divider color="white" variant="middle" sx={{marginTop: 3}}/>
           {/* CREATE NEW EVENT BUTTON---------------------------------------------------- */}
           <Button
               fullWidth="true"

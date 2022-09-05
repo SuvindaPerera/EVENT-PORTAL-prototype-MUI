@@ -1,21 +1,26 @@
 import React from 'react'
-import { Box, Typography } from '@mui/material'
-import SPfeedContent from './SPfeedContent'
+import { Box, Grid, Typography } from '@mui/material'
+import EventCard from './EventCard'
 
 
 const UDfeed = () => {
+
+  const eventName = "Birthday Party";
+
   return (
-    <Box flex={8}>
-      <Typography 
-        variant="h6"
-        display="flex"
-        justifyContent={"center"}
-        mt={3}
-        mb={3}
-      >
-        Events you interacted
-      </Typography>
-      <SPfeedContent />
+    <Box flex={12} p={3} backgroundColor="#fff">
+      <h3 className="userFeedTitle">
+        Event Deatils for {eventName}
+      </h3>
+      <Box 
+        style={{maxHeight: '100vh', overflowY: "auto", overflowX: "hidden"}}
+        > 
+      <Grid container spacing={1}>
+        <Grid item  xs={12} md={12}>
+          <EventCard />
+        </Grid>
+      </Grid> 
+      </Box>
     </Box>
   )
 }

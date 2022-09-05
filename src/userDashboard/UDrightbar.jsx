@@ -6,16 +6,10 @@ import List from '@mui/material/List';
 import Avatar from '@mui/material/Avatar';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import InputAdornment from '@mui/material/InputAdornment';
+import Chats from '../sampleData/chats.json'
 
 const UDrightbar = () => {
 
-  //CHAT USER LIST---------------------------------------
-const[chat, setChat] = React.useState([
-  {id:1, name:"John Doe", message:"Hi, I am interested in your service", avatar: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?cs=srgb&dl=pexels-spencer-selover-775358.jpg&fm=jpg"},
-  {id:2, name:"Kusal Photogrphy", message:"Hi, I am interested in your service", avatar: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?cs=srgb&dl=pexels-spencer-selover-775358.jpg&fm=jpg"},
-  {id:3, name:"Melanga Instruments", message:"Hi, I am interested in your service", avatar: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?cs=srgb&dl=pexels-spencer-selover-775358.jpg&fm=jpg"},
-  {id:4, name:"Nayanthi Catring Service", message:"Hi, I am interested in your service", avatar: "https://images.pexels.com/photos/775358/pexels-photo-775358.jpeg?cs=srgb&dl=pexels-spencer-selover-775358.jpg&fm=jpg"},
-])
 
 //SEARCH FILTER-----------------------------------
 const [searchFilter,setSearchFilter] = useState("");
@@ -48,7 +42,7 @@ const [searchFilter,setSearchFilter] = useState("");
         style={{maxHeight: 400, overflow: 'auto'}}
         >
           <List>
-            {chat.filter((chat)=>{
+            {Chats.filter((chat)=>{
               if(searchFilter === ""){
                 return chat
               }else if(chat.name.toLowerCase().includes(searchFilter.toLowerCase())){
@@ -92,7 +86,7 @@ const [searchFilter,setSearchFilter] = useState("");
         style={{maxHeight: 400, overflow: 'auto'}}
         >
           <List>
-            {chat.filter((chat)=>{
+            {Chats.filter((chat)=>{
               if(searchFilter === ""){
                 return chat
               }else if(chat.name.toLowerCase().includes(searchFilter.toLowerCase())){

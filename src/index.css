@@ -271,3 +271,17 @@ USER DASHBOARD---------------------------------------------------------------- *
   font-weight: 500;
   font-size: 1rem;
 }
+.SPDisplayHomeButton{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+}
+
+.SPDisplayHomeButton h3{
+  color: #1A2027;
+  font-weight: 400;
+  font-size: 1.5rem;
+}

@@ -1,6 +1,7 @@
 import * as React from 'react';
 import Box from '@mui/material/Box';
 import Card from '@mui/material/Card';
+import { useState } from 'react'
 import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import Button from '@mui/material/Button';
@@ -10,51 +11,80 @@ import AttachMoneyIcon from '@mui/icons-material/AttachMoney';
 import MessageIcon from '@mui/icons-material/Message';
 import ThumbUpIcon from '@mui/icons-material/ThumbUp';
 import PlaceIcon from '@mui/icons-material/Place';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
+import ThumbUpAltIcon from '@mui/icons-material/ThumbUpAlt';
+import EventData from '../sampleData/eventDetails.json'
 
 
 
 export default function BasicCard() {
+
   return (
-    <Card sx={{ minWidth: 275, mb: 2 }}  >
-      <CardContent display="flex">
-        <Box display="flex" justifyContent="right">
-        <Chip
-            label="Budget : Negotiable "
-            // onClick={handleClick}
-            // onDelete={handleDelete}
-            deleteIcon={<AttachMoneyIcon />}
-           
-        />
-        </Box>
-        <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-          Photography
-        </Typography>
-        <Typography variant="h5" component="div">
-          Birthday Party photographer needed!
-        </Typography>
-        <Typography sx={{ mb: 1.5 , mt:1.5}} color="text.secondary">
-            <PlaceIcon fontSize='small' />
-         Colombo, Srilanka 
-        </Typography>
-        <Typography variant="body2">
-        Jano's Birthday Party<br></br>
-            A warm, relaxed and confident greeting puts people at ease right away. a personalized compliment to make guests feel special and you're already winning.  
-        </Typography>
+    
+    <div>
+    {EventData.map((event) => (
+    <Box key={event.id}>
+    <Card sx={{ 
+      minWidth: '100%',
+      m: 2,
+      height: '100%',
+      width: '100%',
+      backgroundColor:'#f5f5f5',
+      boxShadow: 0,
+      borderRadius: '10px' 
+      }}  >
+      
+      <CardContent >
+        
+          <Box 
+          display="flex" 
+          justifyContent="flex-end"
+          >
+          <Chip
+              label={event.eventBudget}
+              icon={<ShoppingCartIcon />}
+          >
+          </Chip>
+          </Box>
+          <Box>
+              <h3 className="eventBidCardCategory">
+                {event.eventCategory}
+              </h3>
+              <h2 className="eventBidCardName">
+                {event.eventName}
+              </h2>
+              <h3 className="eventBidCardLocation">
+                {event.eventLocation}
+              </h3>
+              <p className='eventBidCardDescription'>
+                {event.eventDescription}
+              </p>
+          </Box>
       </CardContent>
       <CardActions>
-        <Button size="small" variant="contained"
-            sx={{  borderRadius:"50px" }}  
-        >
-            <MessageIcon fontSize="small"/>
-            Contact
-        </Button>
-        <Button size="small" variant="contained"
-            sx={{  borderRadius:"50px" }}  
-        >
-            <ThumbUpIcon fontSize="small"/>
-            Accept the Event
-        </Button>
+        <Button
+              variant="text"
+              size="large"
+                sx={{  borderRadius:"50px",
+               maxHeight:"50px",
+               textTransform: 'none',
+               justifyContent: 'center',
+               color: '#00ADB5',
+               border : '2px solid #00ADB5',
+              }}
+              text-decoration="none"
+              endIcon={<MessageIcon color="inherit"/>}
+              href=""
+              >
+                <h3 class='eventCardButton'>
+                  Contact
+                </h3>
+          </Button>
       </CardActions>
+      
     </Card>
+    </Box>
+      ))}
+      </div>
   );
 }

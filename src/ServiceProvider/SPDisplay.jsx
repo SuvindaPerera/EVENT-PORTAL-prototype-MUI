@@ -15,6 +15,7 @@ import InfoIcon from '@mui/icons-material/Info';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
+import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 
 
 
@@ -168,6 +169,26 @@ const ImageData = [
                         </ImageListItem>
                     ))}
                  </ImageList>
+            </Grid>
+            <Grid item sm={12} md={12} className='SPDisplayHomeButton'>
+            <Button
+                            variant="text"
+                            size="large"
+                                sx={{  borderRadius:"50px",
+                            maxHeight:"50px",
+                            textTransform: 'none',
+                            justifyContent: 'center',
+                            color: '#00ADB5',
+                            }}
+                            text-decoration="none"
+                            startIcon={<ArrowBackIosNewIcon color="inherit"/>}
+                            href='/Home'
+                            >
+                            <h3>
+                                Back to Home
+                            </h3>
+                               
+                        </Button>
             </Grid>
         </Grid>
         <Footer/>

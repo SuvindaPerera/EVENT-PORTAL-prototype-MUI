@@ -26,7 +26,9 @@ export default function ActionAreaCard() {
     },
       }}
       >
-      <CardActionArea>
+      <CardActionArea
+      href='/ServiceProviderDetails'
+      >
         <CardMedia
           component="img"
           height="200vh"

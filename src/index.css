@@ -285,3 +285,23 @@ USER DASHBOARD---------------------------------------------------------------- *
   font-weight: 400;
   font-size: 1.5rem;
 }
+
+
+/* LOGIN PAGE ----------------------------------------------------*/
+.loginTitle{
+  font-size: 1.75em;
+  font-weight: 500;
+  color: #1A2027;
+  height: 100%;
+  padding: 10px;
+}
+
+.loginContainer{
+  background-color: #f5f5f5;
+}
+.loginInput{
+  background-color: #fff;
+  border-radius: 100px;
+  height: 100%;
+  padding: 10px;
+}

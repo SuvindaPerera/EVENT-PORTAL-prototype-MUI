@@ -24,67 +24,67 @@ export default function BasicCard() {
     <div>
     {EventData.map((event) => (
     <Box key={event.id}>
-    <Card sx={{ 
-      minWidth: '100%',
-      m: 2,
-      height: '100%',
-      width: '100%',
-      backgroundColor:'#f5f5f5',
-      boxShadow: 0,
-      borderRadius: '10px' 
-      }}  >
-      
-      <CardContent >
+      <Card sx={{ 
+        minWidth: '100%',
+        m: 2,
+        height: '100%',
+        width: '100%',
+        backgroundColor:'#f5f5f5',
+        boxShadow: 0,
+        borderRadius: '10px' 
+        }}  >
         
-          <Box 
-          display="flex" 
-          justifyContent="flex-end"
-          >
-          <Chip
-              label={event.eventBudget}
-              icon={<ShoppingCartIcon />}
-          >
-          </Chip>
-          </Box>
-          <Box>
-              <h3 className="eventBidCardCategory">
-                {event.eventCategory}
-              </h3>
-              <h2 className="eventBidCardName">
-                {event.eventName}
-              </h2>
-              <h3 className="eventBidCardLocation">
-                {event.eventLocation}
-              </h3>
-              <p className='eventBidCardDescription'>
-                {event.eventDescription}
-              </p>
-          </Box>
-      </CardContent>
-      <CardActions>
-        <Button
-              variant="text"
-              size="large"
-                sx={{  borderRadius:"50px",
-               maxHeight:"50px",
-               textTransform: 'none',
-               justifyContent: 'center',
-               color: '#00ADB5',
-               border : '2px solid #00ADB5',
-              }}
-              text-decoration="none"
-              endIcon={<MessageIcon color="inherit"/>}
-              href=""
-              >
-                <h3 class='eventCardButton'>
-                  Contact
+        <CardContent >
+          
+            <Box 
+            display="flex" 
+            justifyContent="flex-end"
+            >
+            <Chip
+                label={event.eventBudget}
+                icon={<ShoppingCartIcon />}
+            >
+            </Chip>
+            </Box>
+            <Box>
+                <h3 className="eventBidCardCategory">
+                  {event.eventCategory}
                 </h3>
-          </Button>
-      </CardActions>
-      
-    </Card>
+                <h2 className="eventBidCardName">
+                  {event.eventName}
+                </h2>
+                <h3 className="eventBidCardLocation">
+                  {event.eventLocation}
+                </h3>
+                <p className='eventBidCardDescription'>
+                  {event.eventDescription}
+                </p>
+            </Box>
+        </CardContent>
+        <CardActions>
+          <Button
+                variant="text"
+                size="large"
+                  sx={{  borderRadius:"50px",
+                maxHeight:"50px",
+                textTransform: 'none',
+                justifyContent: 'center',
+                color: '#00ADB5',
+                border : '2px solid #00ADB5',
+                }}
+                text-decoration="none"
+                endIcon={<MessageIcon color="inherit"/>}
+                href=""
+                >
+                  <h3 class='eventCardButton'>
+                    Contact
+                  </h3>
+            </Button>
+        </CardActions>
+        
+      </Card>
     </Box>
       ))}
-      </div>
+    </div>
   );
 }

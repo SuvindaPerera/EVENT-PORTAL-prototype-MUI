@@ -17,11 +17,11 @@ const UDleftbar = () => {
 const eventName = "Birthday Party";
 
 //BUTTON SUBMIT SEARCH ----------------------------
-const [search,setSearch] = useState("");
-const handleSubmit = (e) =>{
-  e.preventDefault();
-  console.log(search);
-}
+// const [search,setSearch] = useState("");
+// const handleSubmit = (e) =>{
+//   e.preventDefault();
+//   console.log(search);
+// }
 
 
 //SEARCH FILTER-----------------------------------

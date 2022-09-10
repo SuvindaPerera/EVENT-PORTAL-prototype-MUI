@@ -1,8 +1,8 @@
-import { Stack, Typography, Button, TextField, Box } from '@mui/material'
+import { Stack, Typography, Button, TextField, Box, Divider ,InputBase} from '@mui/material'
 import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import Footer from './components/Footer'
-import NavbarforLogIn from './components/NavbarforLogIn'
+import NavbarforLogIn from './components/LandingPageNavbar'
 
 
 export default function Login() {
@@ -29,20 +29,22 @@ export default function Login() {
      }
    
   return (
-
-    <Box sx={{  bgcolor:'lightcyan', minHeight:'100vh' }}>
+   <div>
+    <Box 
+    sx={{ height:'100vh' ,backgroundColor:"#f5f5f5" }}>
         <NavbarforLogIn/>
-        <Stack mt={15} justifyContent="center" alignItems="center">
-        <Typography variant='h6'>         
-        LOG IN
-        </Typography><br/><br/>
+        <Stack mt={'5%'} justifyContent="center" alignItems="center" className="loginContainer">
+         <h3 className="loginTitle">
+            Log In
+         </h3>
         
             <form noValidate autoComplete="off" onSubmit = {handleSubmit}>
             <TextField
             onChange={(e) => setUsername(e.target.value)}
             label = "Username"
             variant = "outlined"
-            error = {usernameError}           
+            error = {usernameError}
+            className="inputRounded"            
             /><br/><br/>
 
                 <TextField
@@ -50,8 +52,11 @@ export default function Login() {
                 label = "Password"
                 type = "password" 
                 variant = "outlined"
-                error = {passwordError}            
-                /><br/><br/>
+                error = {passwordError}
+                className="inputRounded"          
+                />
+                
+                <br/><br/>
 
                <Link to="../UserDashboard" style={{ textDecoration: 'none' }}>
                 <Button type="submit" size= "large" variant="contained"
@@ -69,10 +74,10 @@ export default function Login() {
             <Button href="#text-buttons">Register!</Button>
             </Link>
             </Box> 
-
-        </Stack> 
-      
+        </Stack>
     </Box>
+      <Footer/>
+      </div>
   )
 }
 

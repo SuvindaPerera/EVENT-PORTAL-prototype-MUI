@@ -305,3 +305,18 @@ USER DASHBOARD---------------------------------------------------------------- *
   height: 100%;
   padding: 10px;
 }
+
+.signinforkSignined{
+  font-size: 1.25em;
+  font-weight: 400;
+  padding: 10px;
+  margin: 0;
+}
+
+.signinforkLogin{
+  font-size: 1.5em;
+  font-weight: 600;
+  text-transform: none;
+  margin-bottom: 10;
+  color: #00ADB5;
+}

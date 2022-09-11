@@ -106,6 +106,7 @@ const BottomContent = () => {
               }}
               text-decoration="none"
               endIcon={<MyLocationIcon color="inherit"/>}
+              href="/Map"
               >
                 <h3 class='bottomButtons'>
                   Search Map

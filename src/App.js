@@ -18,6 +18,7 @@ import ServiceProviderDashboard from "./ServiceProviderDashboard/ServiceProvider
 import EventCreate from "./Event/EventCreate";
 import EventSearch from "./Event/EventSearch";
 import SPDisplay from "./ServiceProvider/SPDisplay";
+import Map from "./map/Map"
 
 
 
@@ -60,6 +61,9 @@ function App() {
         </Route>
         <Route path="/ServiceProviderDetails">
           <SPDisplay/>
+        </Route>
+        <Route path="/Map">
+          <Map/>
         </Route>
       </Switch> 
     </Router>

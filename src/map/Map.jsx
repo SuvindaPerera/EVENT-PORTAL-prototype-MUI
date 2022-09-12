@@ -2,6 +2,7 @@ import React from 'react'
 import { useJsApiLoader, GoogleMap} from '@react-google-maps/api'
 import Skeleton from '@mui/material/Skeleton';
 import Box from '@mui/material/Box';
+import LandingPageNavbar from '../components/LandingPageNavbar'
 
 
 
@@ -20,7 +21,18 @@ const Map = () => {
 
 
   return (
-    <Box sx={{height: '100vh', width: '100vw'}}>
+    <Box 
+    sx={{
+      height: '100vh', 
+      width: '100vw',
+      alignItems: 'center',
+      justifyContent: 'center',
+      backgroundColor: '#f5f5f5',
+      display: 'flex',
+      flexDirection: 'column',
+      }}>
+        <LandingPageNavbar />
+        <h3 className="mapTitle">Search the Map</h3>
         <GoogleMap 
         center={center} 
         zoom={8} 

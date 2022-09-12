@@ -1,7 +1,7 @@
 import React from 'react'
+import { useState } from 'react';
 import {  Button, Container, Divider, Grid, Stack, Typography } from '@mui/material';
 import { Box } from '@mui/system'
-import { useState } from 'react'
 import LandingPageNavbar from '../components/LandingPageNavbar'
 import TextField from '@mui/material/TextField';
 import Footer from '../components/Footer';
@@ -11,12 +11,21 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import ListSubheader from '@mui/material/ListSubheader';
 import IconButton from '@mui/material/IconButton';
+
 import InfoIcon from '@mui/icons-material/Info';
 import DeleteIcon from '@mui/icons-material/Delete';
 import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import QuestionAnswerIcon from '@mui/icons-material/QuestionAnswer';
 import ArrowBackIosNewIcon from '@mui/icons-material/ArrowBackIosNew';
 import PhoneIcon from '@mui/icons-material/Phone';
+import axios from 'axios';
+import { ToastContainer } from 'react-toastify';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import {FileUpload} from './FileUpload'
+import {ImgDisplay} from './ImgDisplay'
+
+
 
 
 
@@ -26,6 +35,13 @@ const SPName = 'Vision Photography';
 const SPDescription = 'A company description is an overview or summary of a business. Its an important part of a business plan that often briefly describes an organizations history, location, mission statement, management personnel and, when appropriate, legal structure';
 const SPemail ='vision@gmail.com'
 const SPphone = '0712345678'
+
+const [files, setFiles]=useState([]);
+
+const onSuccess = ( savedFiles)=>{
+  setFiles(savedFiles)
+}; 
+
 
 const ImageData = [
     {
@@ -190,6 +206,11 @@ const ImageData = [
                             </h3>
                                
                         </Button>
+            </Grid>
+            <Grid item sm={12} md={12} >
+              <FileUpload onSuccess={onSuccess}/>
+              <ImgDisplay files={files}/>
+             <ToastContainer />
             </Grid>
         </Grid>
         <Footer/>

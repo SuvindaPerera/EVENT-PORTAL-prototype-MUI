@@ -5,8 +5,10 @@ export const ImgDisplay = ({files}) => {
 
         return files.map((file) =>
         <img 
+        loading="lazy"
+        decoding="async"
         style={{ maxWidth: '200px'}} 
-        src={'//localhost:8000/${file.filename}'}
+        src='http://localhost:8000/${file.filename}'
          alt={file.originalname}
          key={file.originalname} 
          />

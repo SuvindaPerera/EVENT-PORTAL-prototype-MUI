@@ -371,9 +371,29 @@ USER DASHBOARD---------------------------------------------------------------- *
 
 /*MAP PAGE----------------------------------------------------------------*/
 .mapTitle{
-  font-size: 1.75em;
+  font-size: 1.5em;
   font-weight: 500;
   color: #1A2027;
   margin: 0;
   padding: 10px;
+}
+
+/* THREE JS CONTENT---------------------------------- */
+.threeJS-container{
+  height: 100vh;
+  width: 100vw;
+  background-color: #010718;
+}
+
+.landingTitle-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landingpageBottomTExt{
+  font-size: 1.5em;
+  font-weight: 400;
+  color: #fff;
+  position: absolute;
 }

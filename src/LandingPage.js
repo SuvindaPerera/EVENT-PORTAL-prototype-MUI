@@ -2,17 +2,35 @@ import { Box, Button, Grid, Stack, Typography } from '@mui/material'
 import React from 'react'
 import LandingPageNavbar from './components/LandingPageNavbar'
 import Cardcomp from './components/Cardcomp'
-import landingBG from './media/landingPagebg.png'
+import TopLogo from './components/logo.png'
 import LandingPageFooter from './components/landingPageFooter'
 import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import PlaceIcon from '@mui/icons-material/Place';
+import ThreeJSscene from './LandingPage/SceneContent'
+
 
 
 const LandingPage = () => {
   return (
-    <Box bgcolor="lightcyan">
-    <LandingPageNavbar topalignment='fixed'/>
-    <Stack  padding={5}>
+    <Box
+    sx={{
+      height: '100vh',
+      width: '100vw',
+    }}
+    >
+    <div className="landingTitle-container">
+      <img src={TopLogo} 
+      alt="EventPortal" 
+      style={{ 
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+        position: 'absolute',
+        height:'10%',
+        paddingTop: '15%',
+         }}/>
+    </div>
+    {/* <Stack  padding={5}>
         <Typography variant='h6'>
           <PlaceIcon/>Nearby place : <b>Badulla</b>
         </Typography>      
@@ -59,7 +77,11 @@ const LandingPage = () => {
           </Grid>
           </Box>
         </Grid>      
-    </Stack>
+    </Stack> */}
+    <div className='threeJS-container'>
+      <ThreeJSscene/>
+    </div>
+
     </Box>
   )
 }

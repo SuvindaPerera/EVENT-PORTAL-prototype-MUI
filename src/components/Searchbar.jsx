@@ -197,7 +197,7 @@ import IconButton from '@mui/material/IconButton';
                         </Box>
                     </Grid>
 
-                    {/* Filters-------------------------------------------------------------------- */}
+                    {/* EDIT-------------------------------------------------------------------- */}
                     <Grid item xs={12} md={2}>
                     <Button 
                         onClick={handleOpen}

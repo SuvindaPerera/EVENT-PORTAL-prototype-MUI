@@ -322,31 +322,32 @@ USER DASHBOARD---------------------------------------------------------------- *
 }
 
 
-/* DROP UPLOAD FILES------------------------------------------------------------ */
+/* DROP UPLOAD FILES / SP EDIT------------------------------------------------------------ */
 .files input {
-  outline: 2px dashed #92b0b3;
+  outline: 2px dashed #00ADB5;
   outline-offset: -10px;
   -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
   transition: outline-offset .15s ease-in-out, background-color .15s linear;
-  padding: 120px 0px 85px 35%;
+  padding-top: 10%;
+  padding-bottom: 10%;
   text-align: center !important;
   margin: 0;
-  width: 100% !important;
+  width: 100% ;
 }
-.files input:focus{     outline: 2px dashed #92b0b3;  outline-offset: -10px;
+.files input:focus{     outline: 2px dashed #00ADB5;  outline-offset: -10px;
   -webkit-transition: outline-offset .15s ease-in-out, background-color .15s linear;
-  transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #92b0b3;
+  transition: outline-offset .15s ease-in-out, background-color .15s linear; border:1px solid #00ADB5;
 }
 .files{ position:relative}
-.files:after {  pointer-events: none;
+.files:after {  
+  pointer-events: none;
   position: absolute;
   top: 60px;
   left: 0;
   width: 50px;
   right: 0;
   height: 56px;
-  content: "";
-  background-image: "./media/folder-upload.png";
+  background-image: "../media/folder-upload.png";
   display: block;
   margin: 0 auto;
   background-size: 100%;
@@ -360,14 +361,36 @@ USER DASHBOARD---------------------------------------------------------------- *
   width: 100%;
   right: 0;
   height: 57px;
-  content: " or drag it here. ";
+  content: " Click here or drag it here. ";
   display: block;
   margin: 0 auto;
-  color: #2ea591;
+  color: #00ADB5;
   font-weight: 600;
   text-transform: capitalize;
   text-align: center;
 }
+.SPDisplayEditButton{
+  color: #fff;
+  font-weight: 500;
+  font-size: 1rem;
+  background-color: #00ADB5;
+  border-radius: 100px;
+  border: none;
+  padding: 10px;
+}
+
+.EditButtonTitle{
+  font-size: 1.5em;
+  font-weight: 600;
+  color: #fff;
+}
+
+.EditButtonTitleDec{
+  font-size: 1.25em;
+  font-weight: 400;
+  color: #1A2027;
+}
+
 
 /*MAP PAGE----------------------------------------------------------------*/
 .mapTitle{

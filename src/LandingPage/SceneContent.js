@@ -82,49 +82,47 @@ function TextName (){
 export default function SceneContent() {
     return (
         <Suspense fallback={null}>
-        <Canvas shadows="true">
-            <PerspectiveCamera 
-                makeDefault 
-                position={[0,0,5]}
-            />
-            <OrbitControls 
-                enableZoom={true}
-                enablePan={false}
-                enableRotate={true}
-                autoRotate={true}
-                autoRotateSpeed={0.5}
-                rotateSpeed={0.4}
-                zoomSpeed={0.4}
-                maxZoom={10}
-                minZoom={1}
-                // maxPolarAngle={1.45}
-            />
-            <fog attach="fog" args={['#202030', 10, 25]} />
-            <TextName/>
-            <Float speed={4} rotaionIntensity={1.5} float Intensity={2.3}>
-                <Portal/>
-            </Float>
-            <Float speed={2} rotaionIntensity={1} float Intensity={1}>
-                <Sphere/>
-            </Float>
-            <Stars
-                radius={100}
-                depth={50}
-                count={5000}
-                factor={7}
-                saturation={10}
-                fade={true}
-            />
-            <ambientLight intensity={50} />
-            <hemisphereLight intensity={2} color="#eaeaea" groundColor="blue" />
-            <spotLight 
-            intensity={10}
-            position={[10, 15, 10]} 
-            angle={0.3} 
-            penumbra={1} 
-            />
-            {/* <Plane/> */}
-        </Canvas>
+            <Canvas shadows="true">
+                <PerspectiveCamera 
+                    makeDefault 
+                    position={[0,0,5.5]}
+                />
+                <OrbitControls 
+                    enableZoom={false}
+                    enablePan={false}
+                    enableRotate={true}
+                    autoRotate={true}
+                    autoRotateSpeed={0.5}
+                    rotateSpeed={0.4}
+                    zoomSpeed={0.4}
+                    // maxPolarAngle={1.45}
+                />
+                <fog attach="fog" args={['#202030', 10, 25]} />
+                <TextName/>
+                <Float speed={4} rotaionIntensity={1.5} float Intensity={2.3}>
+                    <Portal/>
+                </Float>
+                <Float speed={2} rotaionIntensity={1} float Intensity={1}>
+                    <Sphere/>
+                </Float>
+                <Stars
+                    radius={100}
+                    depth={50}
+                    count={5000}
+                    factor={7}
+                    saturation={10}
+                    fade={true}
+                />
+                <ambientLight intensity={50} />
+                <hemisphereLight intensity={2} color="#eaeaea" groundColor="blue" />
+                <spotLight 
+                intensity={10}
+                position={[10, 15, 10]} 
+                angle={0.3} 
+                penumbra={1} 
+                />
+                {/* <Plane/> */}
+            </Canvas>
         </Suspense>
     )
 }

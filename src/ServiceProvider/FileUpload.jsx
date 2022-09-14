@@ -4,6 +4,7 @@ import { ToastContainer } from 'react-toastify';
 import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { useState } from 'react'
+import UploadIcon from '@mui/icons-material/Upload';
 
 
 export const FileUpload = ({onSuccess}) => {
@@ -41,17 +42,17 @@ const onSubmit = (e) => {
     <div>
         <form method="post" action="#" id="#" onSubmit={onSubmit}>
                <div class="form-group files">
-                  <label>Upload Your File </label>
+                  <label>Upload Your Images </label>
                   <input 
                   type="file" 
                   class="form-control"
                   multiple
                   onChange={onInputChange}
-                  
                   />
                </div>
-               <button>
-                Submit
+               <button className='SPDisplayEditButton'>
+                <UploadIcon />
+                Upload Photos
               </button>
              </form>
       

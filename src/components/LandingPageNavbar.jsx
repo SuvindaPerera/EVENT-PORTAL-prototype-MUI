@@ -66,9 +66,6 @@ const Navbar = () => {
               <Button >
               <h3 class='navbarButtons'>Services</h3>
               </Button>
-              <Button >
-              <h3 class='navbarButtons'>About</h3>
-              </Button>
               
           </div>
           <div >

@@ -36,7 +36,7 @@ export default function ActionAreaCard() {
           alt="Vision Photography"
         />
         <CardContent>
-            <Stack display="flex" width="100%"  mb={1} direction="row-reverse">
+            {/* <Stack display="flex" width="100%"  mb={1} direction="row-reverse">
             <StarIcon
                 sx={{ 
                     color:yellow[700],
@@ -47,7 +47,7 @@ export default function ActionAreaCard() {
                     4.5
                 </Typography>
                 
-            </Stack> 
+            </Stack>  */}
           <h3 class='serviceCardTitle'>
             Vision Photography
           </h3>

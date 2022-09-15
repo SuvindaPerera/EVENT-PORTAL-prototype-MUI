@@ -54,8 +54,7 @@ const onSubmit = (e) => {
                 <UploadIcon />
                 Upload Photos
               </button>
-             </form>
-      
+             </form> 
     </div>
   )
 }

@@ -101,7 +101,7 @@ export class MapContainer extends Component {
               lat: this.state.mapCenter.lat,
               lng: this.state.mapCenter.lng
             }}
-            zoom={9}
+            zoom={10}
             >
               <Marker 
                 position={{

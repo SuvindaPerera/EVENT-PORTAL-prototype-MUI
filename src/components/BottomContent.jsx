@@ -50,8 +50,10 @@ const BottomContent = () => {
                border : '2px solid #00ADB5',
               }}
               text-decoration="none"
+              href="/Home"
               >
-                <h3 class='bottomButtons'>
+                <h3 
+                class='bottomButtons'>
                   See More
                 </h3>
             </Button>

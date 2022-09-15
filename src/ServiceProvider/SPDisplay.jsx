@@ -45,62 +45,62 @@ const onSuccess = ( savedFiles)=>{
 
 const ImageData = [
     {
-      img: 'https://images.unsplash.com/photo-1551963831-b3b1ca40c98e',
+      img: 'https://images.unsplash.com/flagged/photo-1566150217714-ebfea356f885?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Breakfast',
       author: '@bkristastucchio',
     },
     {
-      img: 'https://images.unsplash.com/photo-1551782450-a2132b4ba21d',
+      img: 'https://images.unsplash.com/photo-1475714622877-641e013c6096?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=865&q=80',
       title: 'Burger',
       author: '@rollelflex_graphy726',
     },
     {
-      img: 'https://images.unsplash.com/photo-1522770179533-24471fcdba45',
+      img: 'https://images.unsplash.com/photo-1513279922550-250c2129b13a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Camera',
       author: '@helloimnik',
     },
     {
-      img: 'https://images.unsplash.com/photo-1444418776041-9c7e33cc5a9c',
+      img: 'https://images.unsplash.com/photo-1631857455684-a54a2f03665f?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Coffee',
       author: '@nolanissac',
     },
     {
-      img: 'https://images.unsplash.com/photo-1533827432537-70133748f5c8',
+      img: 'https://images.unsplash.com/photo-1509666537727-9154b6962292?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Hats',
       author: '@hjrc33',
     },
     {
-      img: 'https://images.unsplash.com/photo-1558642452-9d2a7deb7f62',
+      img: 'https://images.unsplash.com/photo-1516668557604-c8e814fdb184?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1032&q=80',
       title: 'Honey',
       author: '@arwinneil',
     },
     {
-      img: 'https://images.unsplash.com/photo-1516802273409-68526ee1bdd6',
+      img: 'https://images.unsplash.com/photo-1511288702291-e55d6cfbe3b5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Basketball',
       author: '@tjdragotta',
     },
     {
-      img: 'https://images.unsplash.com/photo-1518756131217-31eb79b20e8f',
+      img: 'https://images.unsplash.com/photo-1630625069449-6e43e90f6c11?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
       title: 'Fern',
       author: '@katie_wasserman',
     },
     {
-      img: 'https://images.unsplash.com/photo-1597645587822-e99fa5d45d25',
+      img: 'https://images.unsplash.com/reserve/unsplash_524010c76b52a_1.JPG?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
       title: 'Mushrooms',
       author: '@silverdalex',
     },
     {
-      img: 'https://images.unsplash.com/photo-1567306301408-9b74779a11af',
+      img: 'https://images.unsplash.com/photo-1603977875299-40f8f37d51de?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80',
       title: 'Tomato basil',
       author: '@shelleypauls',
     },
     {
-      img: 'https://images.unsplash.com/photo-1471357674240-e1a485acb3e1',
+      img: 'https://images.unsplash.com/photo-1533070129449-d0ee17425ac4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=388&q=80',
       title: 'Sea star',
       author: '@peterlaster',
     },
     {
-      img: 'https://images.unsplash.com/photo-1589118949245-7d38baf380d6',
+      img: 'https://images.unsplash.com/photo-1549727636-36589a0cf6f5?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=465&q=80',
       title: 'Bike',
       author: '@southside_customs',
     },
@@ -179,10 +179,10 @@ const ImageData = [
                                 alt={item.title}
                                 loading="lazy"
                             />
-                            <ImageListItemBar
+                            {/* <ImageListItemBar
                                 title={item.title}
                                 subtitle={item.author}
-                            />
+                            /> */}
                         </ImageListItem>
                     ))}
                  </ImageList>
@@ -207,11 +207,11 @@ const ImageData = [
                                
                         </Button>
             </Grid>
-            <Grid item sm={12} md={12} >
+            {/* <Grid item sm={12} md={12} >
               <FileUpload onSuccess={onSuccess}/>
               <ImgDisplay files={files}/>
              <ToastContainer />
-            </Grid>
+            </Grid> */}
         </Grid>
         <Footer/>
     </Box>

@@ -1,16 +1,8 @@
 import React,{ Suspense, useEffect, EffectsComposer } from 'react'
-import * as THREE from 'three';
-import { useRef, useState } from 'react'
-import ReactDOM from 'react-dom'
 import { OrbitControls , Stars, PerspectiveCamera, Text, Float, Environment,} from '@react-three/drei/native';
 import { Canvas, useFrame, useLoader, } from '@react-three/fiber'
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 import { Mesh } from 'three';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer'
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass'
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass'
-import { Bloom } from '@react-three/postprocessing'
-import { Link } from '@mui/material';
 
 function Portal() {
     const gltf = useLoader(
@@ -183,9 +175,9 @@ function TextName (){
             anchorX="center" 
             anchorY="middle" 
             font= "https://fonts.googleapis.com/css2?family=Poppins&display=swap"
-            fontSize={0.12}
+            fontSize={0.08}
             >
-            Click the Core of this portal to enter!
+            Click the Core of this portal to ENTER!
         </Text>
     )
 }
@@ -203,7 +195,7 @@ export default function SceneContent() {
                     enableZoom={false}
                     enablePan={false}
                     enableRotate={true}
-                    // autoRotate={true}
+                    autoRotate={true}
                     autoRotateSpeed={0.5}
                     rotateSpeed={0.4}
                     zoomSpeed={0.4}

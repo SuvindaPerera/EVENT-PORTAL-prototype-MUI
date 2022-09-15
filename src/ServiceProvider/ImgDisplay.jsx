@@ -7,7 +7,7 @@ export const ImgDisplay = ({files}) => {
         <img 
         loading="lazy"
         decoding="async"
-        style={{ maxWidth: '200px'}} 
+        style={{ maxWidth: '500px'}} 
         src={`http://localhost:8000/${file.filename}`}
          alt={file.originalname}
          key={file.originalname} 

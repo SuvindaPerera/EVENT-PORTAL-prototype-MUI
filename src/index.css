@@ -401,6 +401,19 @@ USER DASHBOARD---------------------------------------------------------------- *
   padding: 10px;
 }
 
+.googleMap{
+  height: 100%;
+  width: 100%;
+}
+
+.map{
+  height: 50%;
+  width: 50%;
+}
+
+
+
+
 /* THREE JS CONTENT---------------------------------- */
 .threeJS-container{
   height: 100vh;

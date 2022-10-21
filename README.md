@@ -71,3 +71,4 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 Landing page UI completes
 3D hoverable landingpage completed
+Text added
